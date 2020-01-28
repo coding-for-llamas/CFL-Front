@@ -11,6 +11,6 @@ function setup() {
 describe('/404', () => {
   it('renders the component', () => {
     const { wrapper } = setup();
-    expect(wrapper.find('div.page-content').exists()).toBe(true);
+    expect(wrapper.find('div.container').exists()).toBe(true);
   });
 });
