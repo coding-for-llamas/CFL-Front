@@ -1,12 +1,8 @@
 import React from 'react';
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
-import '../static/css/styles.scss';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.min';
 import Navbar from './containers/Nav/Navbar';
 import AppTemplate from './components/App-Main';
 import FourOhFour from './containers/404';
-import Footer from './containers/Footer/Footer';
 
 const App = () => (
   <div id="App" className="App Site">
@@ -19,7 +15,6 @@ const App = () => (
         </Switch>
       </div>
     </Router>
-    <Footer />
   </div>
 );
 

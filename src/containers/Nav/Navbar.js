@@ -1,24 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
 // import ButtonContainer from './Buttons/Button';
 // import ButtonToggler from './Buttons/ButtonToggler';
 
 const Navbar = () => (
-  <NavWrapper className="navbar navbar-expand-sm navbar-dark px-sm-5" role="navigation">
-    <div className="navbar-brand">
-      <Link to="/">C[F]L</Link>
+  <nav className="menu">
+    <div className="menu-branding">
+      <div className="portrait" role="img" aria-label="Small Web Developer Portrait" />
     </div>
-  </NavWrapper>
+    <div className="menu-nav">
+      <Link to="/" className="nav-item"><div className="nav-link">Home</div></Link>
+      <Link to="/about" className="nav-item"><div className="nav-link">About Me</div></Link>
+      <Link to="/work" className="nav-item"><div className="nav-link">My Work</div></Link>
+      <Link to="/contact" className="nav-item"><div className="nav-link">Contact Me</div></Link>
+    </div>
+  </nav>
 );
-
-const NavWrapper = styled.nav`
-  background: var(--mainBlue);
-  .nav-link {
-    color: var(--mainWhite) !important;
-    font-size: 1.3rem;
-    text-transform: capitalize;
-  }
-`;
 
 export default Navbar;
