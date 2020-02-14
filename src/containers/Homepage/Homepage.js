@@ -24,11 +24,13 @@ export class Homepage extends Component {
       <div className="page-content">
         {width >= 1004
           ? (
-            <div>
-              <h1>
-                Rhayven Ayers
+            <div className="homeHeader">
+              <h1 className="lg-heading">
+                Rhayven
+                {' '}
+                <span className="text-secondary">Ayers</span>
               </h1>
-              <h2>
+              <h2 className="sm-heading">
                 Accessible Web Developer, Programmer &amp; Designer
               </h2>
               <div className="icons">

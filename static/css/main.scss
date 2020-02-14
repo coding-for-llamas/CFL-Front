@@ -15,6 +15,11 @@ body {
     line-height: 1.5;
 }
 
+.container {
+    margin-left: 3.5rem;
+    margin-top: 9rem;
+}
+
 // Headings
 h1,
 h2,
@@ -27,8 +32,9 @@ h3 {
     }
 
     &.sm-heading {
+        margin-top: 1rem;
         margin-bottom: 2rem;
-        padding: 0.2rem 1rem;
+        padding: 0.3rem 1rem !important;
         background: rgba(lighten($primary-color, 2), 0.5);
     }
 }
@@ -47,20 +53,11 @@ a {
     }
 }
 
-header {
-    position: fixed;
-    z-index: 2;
-    width: 100%;
-}
-
 .text-secondary {
-    color: $secondary-color;
+    color: $secondary-color !important;
 }
 
-main {
-    padding: 4rem; // height: 100%;
-    min-height: calc(100vh - 60px);
-
+.siteContent {
     .icons {
         margin-top: 1rem;
 
