@@ -24,6 +24,7 @@ export class About extends Component {
             <div id="about">
               <h1 className="lg-heading">
                 About
+                {' '}
                 <span className="text-secondary">Me</span>
               </h1>
 
