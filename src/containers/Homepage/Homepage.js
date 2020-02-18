@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
 import ReactResizeDetector from 'react-resize-detector';
-import mapStoreToProps from '../../redux/mapStoreToProps';
 import commonUtils from '../../components/lib/commonUtils';
+import DefaultWideHome from './WideHome';
 
 export class Homepage extends Component {
   constructor(props) {
@@ -24,30 +22,7 @@ export class Homepage extends Component {
       <div className="page-content">
         {width >= 1004
           ? (
-            <div className="homeHeader">
-              <h1 className="lg-heading">
-                Rhayven
-                {' '}
-                <span className="text-secondary">Ayers</span>
-              </h1>
-              <h2 className="sm-heading">
-                Accessible Web Developer, Programmer &amp; Designer
-              </h2>
-              <div className="icons">
-                <a href="https://twitter.com/codingforllamas" aria-label="Twitter Page">
-                  <i className="fab fa-twitter fa-2x" />
-                </a>
-                <a href="https://www.facebook.com/codingforllamas" aria-label="Facebook Page">
-                  <i className="fab fa-facebook fa-2x" />
-                </a>
-                <a href="https://www.linkedin.com/in/rhayvenayers" aria-label="LinkedIn Page">
-                  <i className="fab fa-linkedin fa-2x" />
-                </a>
-                <a href="https://github.com/Unesdala" aria-label="Github Page">
-                  <i className="fab fa-github fa-2x" />
-                </a>
-              </div>
-            </div>
+            <DefaultWideHome />
           )
           : (
             <div className="page-content">
@@ -62,12 +37,4 @@ export class Homepage extends Component {
   }
 }
 
-Homepage.defaultProps = { homeContent: {} };
-Homepage.propTypes = {
-  homeContent: PropTypes.shape({
-    title: PropTypes.string,
-    comments: PropTypes.string,
-  }),
-};
-
-export default connect(mapStoreToProps, null)(Homepage);
+export default Homepage;
