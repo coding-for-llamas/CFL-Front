@@ -16,13 +16,22 @@ export class Homepage extends Component {
 
   onResize(width) { this.setState({ width }); }
 
-  render() {
+  get currentStyles() {
+    let result = {};
+    this.style = 'wj';
+    result = {
+      backgroundImagePath: '../../../static/img/background.jpg',
+    };
+    return result;
+  }
+
+  render(backgroundImagePath) {
     const { width } = this.state;
     return (
       <div className="page-content">
         {width >= 1004
           ? (
-            <DefaultWideHome />
+            <DefaultWideHome backgroundImagePath={backgroundImagePath} />
           )
           : (
             <div className="page-content">

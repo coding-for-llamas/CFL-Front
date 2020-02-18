@@ -1,9 +1,9 @@
 import React from 'react';
-import BGImg from '../../../static/img/background.jpg';
+import background from '../../../static/img/background.jpg';
 
 const WideHome = () => (
   <div style={{ marginRight: '-150px' }}>
-    <img src={BGImg} alt="Laptop" className="bg" />
+    <img src={background} alt="Laptop" className="bg" />
     <div className="homeHeader">
       <h1 className="lg-heading">
       Rhayven
