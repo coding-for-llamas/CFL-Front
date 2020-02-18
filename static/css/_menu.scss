@@ -12,11 +12,6 @@
             text-align: left;
             list-style-type: none;
             padding: 1rem .3rem;
-            text-decoration: none;
-
-            &.current>a {
-                color: $secondary-color;
-            }
         }
 
         .nav-link {
@@ -26,6 +21,11 @@
             text-transform: uppercase;
             font-weight: 300;
             color: set-text-color($primary-color);
+            text-decoration: none;
+
+            &.active {
+                color: $secondary-color;
+            }
 
             &:hover {
                 color: $secondary-color;
@@ -154,6 +154,7 @@
             position: relative;
             font-size: 30px;
             text-transform: uppercase;
+            // padding: 1rem 0;
             font-weight: 300;
             color: set-text-color($primary-color);
             text-decoration: none;
