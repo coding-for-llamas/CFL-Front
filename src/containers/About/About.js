@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ReactResizeDetector from 'react-resize-detector';
 import commonUtils from '../../components/lib/commonUtils';
+import DefaultFooter from '../Footer/Footer';
+import portrait from '../../../static/img/portrait.jpg';
 
 export class About extends Component {
   constructor(props) {
@@ -30,7 +32,7 @@ export class About extends Component {
               </h2>
 
               <div className="about-info">
-                <img src="public/img/portrait.jpg" alt="Web Developer Portrait" className="bio-image" />
+                <img src={portrait} alt="Web Developer Portrait" className="bio-image" />
                 <div className="bio" role="main" aria-labelledby="About Main">
                   <h3 className="text-secondary">Bio</h3>
                   <p>
@@ -83,6 +85,7 @@ export class About extends Component {
                     MySQL
                     <br />
                     <abbr title="Photoshop Data file (extension)">PSD</abbr>
+                    {' '}
                     to HTML/CSS
                     <br />
                     <abbr title="Hypertext Preprocessor">PHP</abbr>
@@ -103,6 +106,7 @@ export class About extends Component {
                   </p>
                 </div>
               </div>
+              <DefaultFooter />
 
             </div>
           )
