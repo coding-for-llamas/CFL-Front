@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
-import Navbar from './containers/Nav/Navbar';
+import Navbar from './components/Nav/Navbar';
 import AppTemplate from './components/App-Main';
 import DefaultAbout from './containers/About/About';
 import FourOhFour from './containers/404';

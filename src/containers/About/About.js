@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactResizeDetector from 'react-resize-detector';
 import commonUtils from '../../components/lib/commonUtils';
-import DefaultFooter from '../Footer/Footer';
+import DefaultFooter from '../../components/Footer/Footer';
 import portrait from '../../../static/img/portrait.jpg';
 
 export class About extends Component {
