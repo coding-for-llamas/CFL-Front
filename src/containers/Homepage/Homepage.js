@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import commonUtils from '../../components/lib/commonUtils';
 import DefaultHomeContent from './HomepageContent';
-import backgroundImage from '../../../static/img/background.jpg';
 
 export class Homepage extends Component {
   constructor(props) {
@@ -11,10 +10,19 @@ export class Homepage extends Component {
 
   componentDidMount() { this.commonUtils.setTitleAndScroll(''); }
 
-  render() {
+  get currentStyles() {
+    let result = {};
+    this.style = 'cfl';
+    result = {
+      backgroundImagePath: '../../../static/img/background.jpg',
+    };
+    return result;
+  }
+
+  render(backgroundImagePath) {
     return (
       <div className="page-content">
-        <DefaultHomeContent backgroundImage={backgroundImage} />
+        <DefaultHomeContent backgroundImagePath={backgroundImagePath} />
       </div>
     );
   }

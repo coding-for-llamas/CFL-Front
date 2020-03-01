@@ -1,7 +1,7 @@
 import React from 'react';
 import background from '../../../static/img/background.jpg';
 
-const WideHome = () => (
+const HomeContent = () => (
   <main>
     <img src={background} alt="Laptop" className="bg" />
     <div className="homeHeader">
@@ -31,4 +31,4 @@ const WideHome = () => (
   </main>
 );
 
-export default WideHome;
+export default HomeContent;
