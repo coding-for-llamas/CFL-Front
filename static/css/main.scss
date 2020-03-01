@@ -33,6 +33,24 @@ img.bg {
     z-index: -2;
 }
 
+main {
+    padding: 4rem; // height: 100%;
+    min-height: calc(100vh - 60px);
+
+    .icons {
+        margin-top: 1rem;
+
+        a {
+            padding: 0.4rem;
+
+            &:hover {
+                color: $secondary-color;
+                @include easeOut();
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1024px) {
 
     /* Specific to this particular image */
@@ -110,7 +128,6 @@ a {
 
 // About Page
 .about-info {
-    padding: 0 50px 50px 50px;
     display: grid;
     grid-gap: 30px;
     grid-template-areas:
