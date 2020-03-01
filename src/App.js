@@ -3,6 +3,7 @@ import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import Navbar from './components/Nav/Navbar';
 import AppTemplate from './components/App-Main';
 import DefaultAbout from './containers/About/About';
+import DefaultWork from './containers/Work/Work';
 import FourOhFour from './containers/404';
 
 export class App extends PureComponent {
@@ -15,6 +16,7 @@ export class App extends PureComponent {
             <Switch>
               <Route exact path="/" component={AppTemplate} />
               <Route path="/about" component={DefaultAbout} />
+              <Route path="/work" component={DefaultWork} />
               <Route component={FourOhFour} />
             </Switch>
           </div>
