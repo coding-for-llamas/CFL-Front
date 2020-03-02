@@ -97,6 +97,8 @@ export class About extends Component {
                     MongoDB
                 <br />
                     Express
+                <br />
+                    React Native
               </p>
             </div>
           </div>
