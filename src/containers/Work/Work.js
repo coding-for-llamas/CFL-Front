@@ -32,8 +32,17 @@ export class Work extends Component {
               </a>
               <a href="/daycare" className="btn-light" aria-label="Link to Caring Child Daycare">
                 <i className="fas fa-eye" />
-                {' '}
+                &nbsp;
                     Caring Child Daycare
+              </a>
+              <a
+                href="https://github.com/coding-for-llamas/caring-child-daycare"
+                className="btn-dark"
+                aria-label="Link to Caring Child Daycare Github Page"
+              >
+                <i className="fab fa-github" />
+                &nbsp;
+                Github
               </a>
             </div>
           </div>
