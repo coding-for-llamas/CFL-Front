@@ -31,7 +31,7 @@ module.exports = ({
 
   entry: {
     app: [`${srcDir}/main.js`],
-    vendor: ['jquery', 'bootstrap'],
+    vendor: ['bootstrap'],
   },
 
   mode: production ? 'production' : 'development',

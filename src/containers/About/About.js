@@ -65,6 +65,12 @@ export class About extends Component {
                     JavaScript
                 <br />
                     WordPress
+                <br />
+                    Bootstrap
+                <br />
+                <abbr title="Photoshop Data file (extension)">PSD</abbr>
+                {' '}
+                    to HTML/CSS
               </p>
             </div>
             <div className="about about-2">
@@ -72,15 +78,9 @@ export class About extends Component {
               <p>
                     Accessible Web Design
                 <br />
-                    Bootstrap
-                <br />
                     Mobile Friendly Web Design
                 <br />
                     MySQL
-                <br />
-                <abbr title="Photoshop Data file (extension)">PSD</abbr>
-                {' '}
-                    to HTML/CSS
                 <br />
                 <abbr title="Hypertext Preprocessor">PHP</abbr>
                 <br />
@@ -97,6 +97,8 @@ export class About extends Component {
                     MongoDB
                 <br />
                     Express
+                <br />
+                    React Native
               </p>
             </div>
           </div>
