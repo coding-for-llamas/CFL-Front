@@ -4,6 +4,7 @@ import Navbar from './components/Nav/Navbar';
 import AppTemplate from './components/App-Main';
 import DefaultAbout from './containers/About/About';
 import DefaultWork from './containers/Work/Work';
+import DefaultContact from './containers/Contact/Contact';
 import FourOhFour from './containers/404';
 
 export class App extends PureComponent {
@@ -17,6 +18,7 @@ export class App extends PureComponent {
               <Route exact path="/" component={AppTemplate} />
               <Route path="/about" component={DefaultAbout} />
               <Route path="/work" component={DefaultWork} />
+              <Route path="/contact" component={DefaultContact} />
               <Route component={FourOhFour} />
             </Switch>
           </div>

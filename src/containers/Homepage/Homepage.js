@@ -1,46 +1,19 @@
 import React, { Component } from 'react';
-import ReactResizeDetector from 'react-resize-detector';
 import commonUtils from '../../components/lib/commonUtils';
-import DefaultWideHome from './WideHome';
+import DefaultHomeContent from './HomepageContent';
 
 export class Homepage extends Component {
   constructor(props) {
     super(props);
     this.commonUtils = commonUtils;
-    this.parentRef = React.createRef();
-    this.onResize = this.onResize.bind(this);
-    this.state = { width: 100 };
   }
 
   componentDidMount() { this.commonUtils.setTitleAndScroll(''); }
 
-  onResize(width) { this.setState({ width }); }
-
-  get currentStyles() {
-    let result = {};
-    this.style = 'wj';
-    result = {
-      backgroundImagePath: '../../../static/img/background.jpg',
-    };
-    return result;
-  }
-
-  render(backgroundImagePath) {
-    const { width } = this.state;
+  render() {
     return (
       <div className="page-content">
-        {width >= 1004
-          ? (
-            <DefaultWideHome backgroundImagePath={backgroundImagePath} />
-          )
-          : (
-            <div className="page-content">
-              <p>
-                Hello from Narrow Front Page.
-              </p>
-            </div>
-          )}
-        <ReactResizeDetector handleWidth handleHeight onResize={this.onResize} targetDomEl={this.parentRef.current} />
+        <DefaultHomeContent />
       </div>
     );
   }

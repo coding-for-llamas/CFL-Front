@@ -1,8 +1,8 @@
 import React from 'react';
 import background from '../../../static/img/background.jpg';
 
-const WideHome = () => (
-  <div style={{ marginRight: '-150px' }}>
+const HomeContent = () => (
+  <main>
     <img src={background} alt="Laptop" className="bg" />
     <div className="homeHeader">
       <h1 className="lg-heading">
@@ -28,7 +28,7 @@ const WideHome = () => (
         </a>
       </div>
     </div>
-  </div>
+  </main>
 );
 
-export default WideHome;
+export default HomeContent;
