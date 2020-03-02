@@ -92,6 +92,7 @@
     "react-router-dom": "latest",
     "react-router-hash-link": "^1.2.2",
     "react-slick": "latest",
+    "reactstrap": "^8.4.1",
     "redux": "latest",
     "redux-logger": "latest",
     "redux-persist": "latest",
