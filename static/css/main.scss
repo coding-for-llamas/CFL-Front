@@ -185,6 +185,10 @@ a {
             @include easeOut;
         }
     }
+    
+    a {
+        text-decoration: none;
+    }
 }
 
 // Contact Page
