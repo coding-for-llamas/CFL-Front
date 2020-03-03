@@ -134,9 +134,6 @@ module.exports = ({
 
   plugins: [
     new ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-      'window.jQuery': 'jquery',
       Popper: ['popper.js', 'default'],
     }),
     new HtmlWebpackPlugin({
