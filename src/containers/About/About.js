@@ -16,13 +16,13 @@ export class About extends Component {
       <div className="page-content">
         <main id="about">
           <h1 className="lg-heading">
-                About
+            About
             {' '}
             <span className="text-secondary">Me</span>
           </h1>
 
           <h2 className="sm-heading">
-                A bit about the developer.
+            A bit about the developer.
           </h2>
 
           <div className="about-info">
@@ -30,26 +30,26 @@ export class About extends Component {
             <div className="bio" role="main" aria-labelledby="About Main">
               <h3 className="text-secondary">Bio</h3>
               <p>
-                    I have been interested in the tech field since I was a child, taking apart and rebuilding electronic
-                    toys that my father would bring home, fascinated with how they worked.
+                I have been interested in the tech field since I was a child, taking apart and rebuilding electronic
+                toys that my father would bring home, fascinated with how they worked.
               </p>
               <p>
                 {' '}
-                    My true passion really took off back in the early days of Neopets, though. I wanted to be able to
-                    customize my user lookup, so I started dabbling with simple HTML and CSS with the help of their
-                    personal guides.
+                My true passion really took off back in the early days of Neopets, though. I wanted to be able to
+                customize my user lookup, so I started dabbling with simple HTML and CSS with the help of their
+                personal guides.
               </p>
               <p>
-                    In later years, I expanded to myspace (customizing my user page) and began to build static sites.
-                    Most of the sites I put together were simple in nature, but I found the process of it all
-                    fascinating.
+                In later years, I expanded to myspace (customizing my user page) and began to build static sites.
+                Most of the sites I put together were simple in nature, but I found the process of it all
+                fascinating.
               </p>
               <p>
-                    Since then, I&apos;ve gone to community college to obtain my Career Service Certificate in web
-                    programming, and I have taken a vested interest in learning as much as I can. My main focus is on
-                    accessibility in web development - it is my belief
-                    that accessible web design can both look and run just as well as traditionaly programmed websites
-                    when accessibility is considered from the beginning.
+                Since then, I&apos;ve gone to community college to obtain my Career Service Certificate in web
+                programming, and I have taken a vested interest in learning as much as I can. My main focus is on
+                accessibility in web development - it is my belief
+                that accessible web design can both look and run just as well as traditionaly programmed websites
+                when accessibility is considered from the beginning.
               </p>
 
               <p>The internet should be accessible to all and with a little forethought, that is achievable!</p>
@@ -58,35 +58,35 @@ export class About extends Component {
             <div className="about about-1">
               <h3 role="main" aria-labelledby="About 1"><u>Proficient In</u></h3>
               <p>
-                    HTML5
+                HTML5
                 <br />
-                    CSS3
+                CSS3
                 <br />
-                    JavaScript
+                JavaScript
                 <br />
-                    WordPress
+                WordPress
                 <br />
-                    Bootstrap
+                Bootstrap
                 <br />
                 <abbr title="Photoshop Data file (extension)">PSD</abbr>
                 {' '}
-                    to HTML/CSS
+                to HTML/CSS
               </p>
             </div>
             <div className="about about-2">
               <h3 role="main" aria-labelledby="About 2"><u>Comfortable In</u></h3>
               <p>
-                    Accessible Web Design
+                Accessible Web Design
                 <br />
-                    Mobile Friendly Web Design
+                Mobile Friendly Web Design
                 <br />
-                    MySQL
+                MySQL
                 <br />
                 <abbr title="Hypertext Preprocessor">PHP</abbr>
                 <br />
-                    Node.JS
+                Node.JS
                 <br />
-                    React
+                React
                 <br />
                 <abbr title="JavaScript XML">JSX</abbr>
               </p>
@@ -94,11 +94,11 @@ export class About extends Component {
             <div className="about about-3">
               <h3 role="main" aria-labelledby="About 3"><u>Learning</u></h3>
               <p>
-                    MongoDB
+                MongoDB
                 <br />
-                    Express
+                Express
                 <br />
-                    React Native
+                React Native
               </p>
             </div>
           </div>

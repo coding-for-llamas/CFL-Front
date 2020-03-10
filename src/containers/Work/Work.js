@@ -16,13 +16,13 @@ export class Work extends Component {
       <div className="page-content">
         <main id="work">
           <h1 className="lg-heading">
-                My
+            My
             {' '}
             <span className="text-secondary">Work</span>
           </h1>
 
           <h2 className="sm-heading">
-                Some of the projects I&apos;ve worked on.
+            Some of the projects I&apos;ve worked on.
           </h2>
 
           <div className="projects">
@@ -33,7 +33,7 @@ export class Work extends Component {
               <a href="/daycare" className="btn-light" aria-label="Link to Caring Child Daycare">
                 <i className="fas fa-eye" />
                 &nbsp;
-                    Caring Child Daycare
+                Caring Child Daycare
               </a>
               <a
                 href="https://github.com/coding-for-llamas/caring-child-daycare"

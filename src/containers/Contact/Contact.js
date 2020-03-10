@@ -15,13 +15,13 @@ export class Contact extends Component {
       <div className="page-content">
         <main id="contact">
           <h1 className="lg-heading">
-                  Contact
+            Contact
             {' '}
             <span className="text-secondary">Me</span>
           </h1>
 
           <h2 className="sm-heading">
-                  Want to talk? Here&apos;s where I can be reached!
+            Want to talk? Here&apos;s where I can be reached!
           </h2>
 
           <div className="contact-info">
