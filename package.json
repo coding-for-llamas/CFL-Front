@@ -15,7 +15,7 @@
     }
   ],
   "engines": {
-    "node": ">=13.8.0"
+    "node": ">=13.11.0"
   },
   "files": [
     "webpack.config.js",
@@ -137,7 +137,7 @@
     "stylelint": "latest",
     "stylelint-config-standard": "latest",
     "stylelint-scss": "latest",
-    "typescript": "latest",
+    "typescript": "^3.8.3",
     "webpack-dev-server": "latest"
   },
   "snyk": true

@@ -6,12 +6,12 @@ const HomeContent = () => (
     <img src={background} alt="Laptop" className="bg" />
     <div className="homeHeader">
       <h1 className="lg-heading">
-      Rhayven
+        Rhayven
         {' '}
         <span className="text-secondary">Ayers</span>
       </h1>
       <h2 className="sm-heading">
-      Accessible Web Developer, Programmer &amp; Designer
+        Accessible Web Developer, Programmer &amp; Designer
       </h2>
       <div className="icons">
         <a href="https://twitter.com/codingforllamas" aria-label="Twitter Page">
