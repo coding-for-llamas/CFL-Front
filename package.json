@@ -15,7 +15,7 @@
     }
   ],
   "engines": {
-    "node": ">=13.11.0"
+    "node": ">=14.1.0"
   },
   "files": [
     "webpack.config.js",
@@ -128,9 +128,9 @@
     "eslint-plugin-react-hooks": "latest",
     "eslint-plugin-security": "latest",
     "identity-obj-proxy": "latest",
-    "jest": "latest",
-    "jest-puppeteer": "latest",
-    "puppeteer": "latest",
+    "jest": "^24.9.0",
+    "jest-puppeteer": "^4.4.0",
+    "puppeteer": "^2.1.1",
     "react-hot-loader": "latest",
     "redux-mock-store": "latest",
     "sinon": "latest",
