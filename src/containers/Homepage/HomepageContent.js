@@ -2,7 +2,7 @@ import React from 'react';
 import background from '../../../static/img/background.jpg';
 
 const HomeContent = () => (
-  <main>
+  <main className="home-main">
     <img src={background} alt="Laptop" className="bg" />
     <div className="homeHeader">
       <h1 className="lg-heading">

@@ -33,6 +33,10 @@ img.bg {
     z-index: -2;
 }
 
+main.home-main {
+    min-height: 0 !important;
+}
+
 main {
     padding: 4rem; // height: 100%;
     min-height: calc(100vh - 60px);
@@ -117,6 +121,17 @@ a {
         }
     }
 
+    .contact-info {
+        a:hover {
+            color: $secondary-color;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: $third-color;
+        }
+    }
+
     &#home {
         overflow: hidden;
 
@@ -185,7 +200,7 @@ a {
             @include easeOut;
         }
     }
-    
+
     a {
         text-decoration: none;
     }
