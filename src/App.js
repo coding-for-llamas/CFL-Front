@@ -46,4 +46,4 @@ App.propTypes = {
 };
 App.defaultProps = { images: [] };
 
-export default connect(mapStoreToProps, null)(App);
+export default connect(mapStoreToProps)(App);
