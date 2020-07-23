@@ -19,7 +19,7 @@ export default class Navigation extends Component {
     const { width } = this.state;
     return (
       <>
-        {width <= 768 - 18 || width === 751
+        {width <= 768
           ? (
             <DefaultCollapsableNav />
           ) : (
