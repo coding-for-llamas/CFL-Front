@@ -2,6 +2,7 @@
 
 // Widescreens
 @include mediaXl {
+    // Work
     .projects {
         grid-template-columns: repeat(4, 1fr);
     }
@@ -9,6 +10,7 @@
 
 // Desktops & Laptops
 @include mediaLg {
+    // Work
     .projects {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -23,6 +25,10 @@
         margin-left: 0;
     }
 
+    .container .work {
+        margin-top: -120px;
+    }
+
     main {
         align-items: center;
         text-align: center;
@@ -33,6 +39,7 @@
         }
     }
 
+    // Menu
     ul.menu-nav,
     div.menu-branding {
         width: 100%;
@@ -49,11 +56,7 @@
         font-size: 24px;
     }
 
-    .menu-branding {
-        height: 25vh;
-        transform: translate3d(100%, 0, 0);
-    }
-
+    // About
     .about-info {
         grid-template-areas:
             'bioimage'
@@ -65,6 +68,7 @@
         grid-template-columns: 1fr;
     }
 
+    // Work
     .projects,
     .contact-info {
         grid-template-columns: repeat(2, 1fr);
@@ -77,9 +81,13 @@
     @include mobileMenu;
 
     @media screen and (min-width: 320px) {
+        // Homepage
         main .lg-heading {
-            font-size: 4rem !important;
             margin: 0 10.5px;
+            font-size: 3rem;
+        }
+        main .sm-heading {
+            font-size: 1.5rem;
         }
     }
 
@@ -87,9 +95,23 @@
         .container {
             margin-top: 80px !important;
         }
+
+        .container .work {
+            margin-top: -130px !important;
+        }
+
+        // Homepage
+        main .lg-heading {
+            font-size: 4rem;
+        }
     }
 
-
+    @media screen and (min-width: 400px) {
+        // Homepage
+        main .lg-heading {
+            margin: 0px 1.5px 0 10.5px;
+        }
+    }
 
     .container {
         text-align: center !important;
@@ -107,16 +129,25 @@
         margin-left: -116px;
         margin-top: -70px;
 
-        #home h1 {
-            margin-top: 10vh;
-        }
-
         .lg-heading {
-            margin-top: 1rem;
-            font-size: 5rem;
+            margin-top: 3rem;
         }
     }
 
+    // About
+
+    .about-info {
+        grid-template-areas:
+            'bioimage'
+            'bio'
+            'about1'
+            'about2'
+            'about3';
+
+        grid-template-columns: 1fr;
+    }
+
+    // Work/Contact
     .projects,
     .contact-info {
         grid-template-columns: 1fr;
