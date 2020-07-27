@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { About } from '../../src/containers/About/About';
+import AboutContent from '../../src/containers/About/AboutContent';
 import Footer from '../../src/components/Footer/Footer';
 
 describe('About', () => {
@@ -12,7 +13,8 @@ describe('About', () => {
 
   it('Renders the About page', () => {
     const { wrapper } = setup();
-    expect(wrapper.find('div.page-content').exists()).toBe(true);
+    expect(wrapper.find(AboutContent).exists()).toBe(true);
+    expect(wrapper.find(AboutContent).dive().find('main.about').exists()).toBe(true);
     expect(wrapper.find(Footer).exists()).toBe(true);
     expect(wrapper.find(Footer).dive().find('footer#main-footer').exists()).toBe(true);
   });
