@@ -1,0 +1,16 @@
+// Contact Page
+.contact {
+  background: lighten($primary-color, 5);
+  padding: 0.5rem;
+  border-bottom: $secondary-color 5px solid;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-areas: 'contact1';
+  grid-template-columns: repeat(5, 1fr);
+
+  .contact-1 {
+      grid-area: contact1;
+  }
+}

@@ -1,0 +1,18 @@
+// Headings
+h1,
+h2,
+h3 {
+    margin: 0;
+    font-weight: 400;
+
+    &.lg-heading {
+        font-size: 6rem;
+    }
+
+    &.sm-heading {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        padding: 0.3rem 1rem !important;
+        background: rgba(lighten($primary-color, 2), 0.5);
+    }
+}
