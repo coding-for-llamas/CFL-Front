@@ -1,3 +1,4 @@
+// @ts-nocheck
 const setTitleAndScroll = (pageTitle) => {
   if (pageTitle !== '') pageTitle += ' | ';// eslint-disable-line no-param-reassign
   document.title = `${pageTitle}Coding For Llamas`;

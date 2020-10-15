@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 
 const portrait = 'https://www.dl.dropboxusercontent.com/s/n020xh0qaqqpwzc/portrait.jpg?dl=0';

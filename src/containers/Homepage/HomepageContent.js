@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 
 const background = 'https://www.dl.dropboxusercontent.com/s/9024lrtybjgx01f/background.jpg?dl=0';

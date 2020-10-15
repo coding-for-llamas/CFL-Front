@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 
 const project1 = 'https://www.dl.dropboxusercontent.com/s/c9mxoixh5sqnict/project1.png?dl=0';

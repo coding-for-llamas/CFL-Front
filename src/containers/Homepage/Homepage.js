@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { Component } from 'react';
 import commonUtils from '../../components/lib/commonUtils';
 import DefaultHomeContent from './HomepageContent';
