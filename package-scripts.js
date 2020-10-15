@@ -1,7 +1,7 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const {
   series, crossEnv, concurrent, rimraf,
 } = require('nps-utils');
-// const { config: { port: E2E_PORT } } = require('./test/protractor.conf');
 
 module.exports = {
   scripts: {
@@ -17,8 +17,8 @@ module.exports = {
         watch: crossEnv('BABEL_TARGET=node jest --watch'),
       },
       lint: {
-        default: 'eslint . --ext .js',
-        fix: 'eslint . --ext .js --fix',
+        default: 'eslint . --ext .js,.tsx,.ts',
+        fix: 'eslint . --ext .js,.tsx,.ts --fix',
       },
       react: {
         default: crossEnv('BABEL_TARGET=node jest --no-cache --config jest.React.json --notify'),
@@ -30,26 +30,6 @@ module.exports = {
         jest: 'nps test.jest',
         lint: 'nps test.lint',
       }),
-    },
-    e2e: {
-      default: `${concurrent({
-        // webpack: `webpack-dev-server --inline --port=${E2E_PORT}`,
-        protractor: 'nps e2e.whenReady',
-      })} --kill-others --success first`,
-      protractor: {
-        install: 'webdriver-manager update',
-        default: series(
-          'nps e2e.protractor.install',
-          'protractor test/protractor.conf.js',
-        ),
-        debug: series(
-          'nps e2e.protractor.install',
-          'protractor test/protractor.conf.js --elementExplorer',
-        ),
-      },
-      whenReady: series(
-        'nps e2e.protractor',
-      ),
     },
     build: 'nps webpack.build',
     webpack: {
@@ -87,6 +67,5 @@ module.exports = {
         hmr: 'webpack-dev-server -d --inline --hot --env.server',
       },
     },
-    serve: 'pushstate-server dist',
   },
 };

@@ -29,13 +29,6 @@
         }
     }
 
-
-    .contact {
-        .lg-heading {
-            margin-top: -9rem !important;
-        }
-    }
-
     main {
         align-items: center;
         text-align: center;
@@ -43,6 +36,13 @@
         .lg-heading {
             line-height: 1;
             margin-bottom: 2.5rem;
+        }
+    }
+
+
+    .contact {
+        .lg-heading {
+            margin-top: -9rem !important;
         }
     }
 
@@ -109,11 +109,11 @@
     }
 
     .siteContent .icons {
-        margin-top: -24px;
+        margin-top: -24px !important;
     }
 
     main {
-        padding: 2rem;
+        padding: 2rem !important;
         margin-left: -116px;
         margin-top: -70px;
 

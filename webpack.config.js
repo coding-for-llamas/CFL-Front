@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 require('dotenv').config();
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -75,7 +76,7 @@ module.exports = ({
     rules: [
       {
         test: /\.(t|j)sx?$/,
-        use: { loader: 'awesome-typescript-loader' },
+        use: { loader: 'ts-loader' },
         exclude: [/node_modules/],
       },
       {
@@ -107,8 +108,6 @@ module.exports = ({
         use: scssRules,
       },
       { test: /\.html$/i, loader: 'html-loader' },
-      // eslint-disable-next-line no-useless-escape
-      { test: /[\/\\]node_modules[\/\\]bluebird[\/\\].+\.js$/, loader: 'expose-loader?Promise' },
       // embed small images and fonts as Data Urls and larger ones as files:
       { test: /\.(png|gif|jpg|cur)$/i, loader: 'url-loader', options: { limit: 8192 } },
       { test: /\.woff2(\?v=[0-9]\.[0-9]\.[0-9])?$/i, loader: 'url-loader', options: { limit: 10000, mimetype: 'application/font-woff2' } },
@@ -135,7 +134,6 @@ module.exports = ({
     new CopyPlugin({
       patterns: [
         { from: 'static/favicon.ico', to: 'favicon.ico' },
-        // { from: 'static/img', to: 'static/img' },
       ],
     }),
     new webpack.EnvironmentPlugin(['NODE_ENV',
