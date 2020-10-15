@@ -43,27 +43,25 @@ a {
             }
         }
     }
-}
 
-main {
-    padding: 4rem; // height: 100%;
-    min-height: calc(100vh - 60px);
+    main {
+        padding: 4rem; // height: 100%;
+        min-height: calc(100vh - 60px);
 
-    .icons {
-        margin-top: 1rem;
+        .icons {
+            margin-top: 1rem;
 
-        a {
-            padding: 0.4rem;
+            a {
+                padding: 0.4rem;
 
-            &:hover {
-                color: $secondary-color;
-                @include easeOut();
+                &:hover {
+                    color: $secondary-color;
+                    @include easeOut();
+                }
             }
         }
     }
-}
 
-.siteContent {
     .contact-info {
         a:hover {
             color: $secondary-color;
