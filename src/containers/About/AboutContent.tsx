@@ -2,7 +2,7 @@ import React from 'react';
 
 const portrait = 'https://www.dl.dropboxusercontent.com/s/n020xh0qaqqpwzc/portrait.jpg?dl=0';
 
-const AboutContent = () => (
+const AboutContent = (): JSX.Element => (
   <div className="container">
     <main className="about">
       <h1 className="lg-heading">

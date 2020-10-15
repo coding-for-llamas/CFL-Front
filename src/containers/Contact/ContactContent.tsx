@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ContactContent = () => (
+const ContactContent = (): JSX.Element => (
   <div className="container">
     <main className="contact">
       <h1 className="lg-heading">

@@ -2,7 +2,7 @@ import React from 'react';
 
 const project1 = 'https://www.dl.dropboxusercontent.com/s/c9mxoixh5sqnict/project1.png?dl=0';
 
-const WorkContent = () => (
+const WorkContent = (): JSX.Element => (
   <div className="container">
     <main className="work">
       <h1 className="lg-heading">
