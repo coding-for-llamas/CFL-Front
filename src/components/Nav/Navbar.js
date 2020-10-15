@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import ReactResizeDetector from 'react-resize-detector';

@@ -1,5 +1,7 @@
+// @ts-nocheck
 import React from 'react';
-import project1 from '../../../static/img/projects/project1.png';
+
+const project1 = 'https://www.dl.dropboxusercontent.com/s/c9mxoixh5sqnict/project1.png?dl=0';
 
 const WorkContent = () => (
   <div className="container">

@@ -1,5 +1,7 @@
+// @ts-nocheck
 import React from 'react';
-import portrait from '../../../static/img/portrait.jpg';
+
+const portrait = 'https://www.dl.dropboxusercontent.com/s/n020xh0qaqqpwzc/portrait.jpg?dl=0';
 
 const AboutContent = () => (
   <div className="container">

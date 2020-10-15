@@ -4,6 +4,7 @@ import {
   Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink,
 } from 'reactstrap';
 
+// @ts-nocheck
 const CollapsableNav = () => {
   const [collapsed, setCollapsed] = useState(true);
 
