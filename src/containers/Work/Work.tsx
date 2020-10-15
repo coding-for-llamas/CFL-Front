@@ -11,9 +11,9 @@ export class Work extends Component {
     this.commonUtils = commonUtils;
   }
 
-  componentDidMount() { this.commonUtils.setTitleAndScroll('My Work'); }
+  componentDidMount(): void { this.commonUtils.setTitleAndScroll('My Work'); }
 
-  render() {
+  render(): JSX.Element {
     return (
       <>
         <div className="page-content">

@@ -7,7 +7,7 @@ interface NavigationState {
   width: number;
 }
 
-export default class Navigation extends Component<{}, NavigationState> {
+export default class Navigation extends Component<Record<string, unknown>, NavigationState> {
   parentRef: any;
 
   constructor(props: Record<string, unknown>) {
@@ -17,11 +17,11 @@ export default class Navigation extends Component<{}, NavigationState> {
     this.state = { width: 320 };
   }
 
-  onResize(width: number) {
+  onResize(width: number): void {
     this.setState({ width });
   }
 
-  render() {
+  render(): JSX.Element {
     const { width } = this.state;
     return (
       <>

@@ -18,17 +18,17 @@ export interface AppProps {
 }
 
 export class App extends Component<AppProps> {
-
   static defaultProps = {
     dispatch: (): void => { },
     images: [],
   };
 
-async componentDidMount(): Promise<void> {
+  async componentDidMount(): Promise<void> {
     const { dispatch, images } = this.props;
-    if (images.length === 0)dispatch(getImages());  }
+    if (images.length === 0) dispatch(getImages());
+  }
 
-  render() {
+  render(): JSX.Element {
     return (
       <div id="App" className="App Site">
         <Router>

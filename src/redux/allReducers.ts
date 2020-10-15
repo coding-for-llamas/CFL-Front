@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { combineReducers } from 'redux';
 import imagesReducer from './reducers/imagesReducer';
 

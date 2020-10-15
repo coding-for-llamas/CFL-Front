@@ -31,19 +31,6 @@ a {
 }
 
 .siteContent {
-    .icons {
-        margin-top: 1rem;
-
-        a {
-            padding: 0.4rem;
-
-            &:hover {
-                color: $secondary-color;
-                @include easeOut();
-            }
-        }
-    }
-
     main {
         padding: 4rem; // height: 100%;
         min-height: calc(100vh - 60px);
@@ -59,17 +46,6 @@ a {
                     @include easeOut();
                 }
             }
-        }
-    }
-
-    .contact-info {
-        a:hover {
-            color: $secondary-color;
-            text-decoration: none;
-        }
-
-        a:visited {
-            color: $third-color;
         }
     }
 

@@ -11,9 +11,9 @@ export class About extends Component {
     this.commonUtils = commonUtils;
   }
 
-  componentDidMount() { this.commonUtils.setTitleAndScroll('About'); }
+  componentDidMount(): void { this.commonUtils.setTitleAndScroll('About'); }
 
-  render() {
+  render(): JSX.Element {
     return (
       <>
         <div className="page-content">

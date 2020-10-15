@@ -11,9 +11,9 @@ export class Contact extends Component {
     this.commonUtils = commonUtils;
   }
 
-  componentDidMount() { this.commonUtils.setTitleAndScroll('Contact Me'); }
+  componentDidMount(): void { this.commonUtils.setTitleAndScroll('Contact Me'); }
 
-  render() {
+  render(): JSX.Element {
     return (
       <>
         <div className="page-content">

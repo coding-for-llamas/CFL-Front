@@ -5,7 +5,7 @@ function getFullYear() {
   const n = d.getFullYear();
   return n;
 }
-const Footer = () => (
+const Footer = (): JSX.Element => (
   <footer id="main-footer">
     Copyright &copy; 2018-
     {getFullYear()}

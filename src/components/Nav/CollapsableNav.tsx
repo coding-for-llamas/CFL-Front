@@ -4,7 +4,7 @@ import {
   Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink,
 } from 'reactstrap';
 
-const CollapsableNav = () => {
+const CollapsableNav = (): JSX.Element => {
   const [collapsed, setCollapsed] = useState(true);
 
   const toggleNavbar = () => setCollapsed(!collapsed);

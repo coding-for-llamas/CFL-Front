@@ -11,7 +11,7 @@ export interface Store {
   images: { images: Iimage[] };
 }
 
-const mapStoreToProps = (store: Store) => ({
+const mapStoreToProps = (store: Store): { images: Iimage[] } => ({
   images: store.images.images,
 });
 export default mapStoreToProps;
