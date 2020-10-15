@@ -1,18 +1,23 @@
-// @ts-nocheck
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import ReactResizeDetector from 'react-resize-detector';
 import DefaultCollapsableNav from './CollapsableNav';
 
-export default class Navigation extends Component {
-  constructor(props) {
+interface NavigationState {
+  width: number;
+}
+
+export default class Navigation extends Component<{}, NavigationState> {
+  parentRef: any;
+
+  constructor(props: Record<string, unknown>) {
     super(props);
     this.parentRef = React.createRef();
     this.onResize = this.onResize.bind(this);
     this.state = { width: 320 };
   }
 
-  onResize(width) {
+  onResize(width: number) {
     this.setState({ width });
   }
 

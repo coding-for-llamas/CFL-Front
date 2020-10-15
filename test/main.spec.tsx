@@ -1,4 +1,4 @@
-import * as main from '../src/main.tsx';
+import * as main from '../src/main';
 
 describe('Main', () => {
   it('renders to the root', () => {
