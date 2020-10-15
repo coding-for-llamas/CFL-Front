@@ -5,7 +5,8 @@ configure({ adapter: new Adapter() });
 document.body.innerHTML = '<div id="root"></div>';
 
 window.location = {
-  href: '',
+  ...window.location,
+  href: 'https://codingforllamas.com',
   reload: jest.fn(),
   assign: jest.fn(),
 };

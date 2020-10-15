@@ -6,7 +6,7 @@ import Footer from '../../components/Footer/Footer';
 export class Work extends Component {
   commonUtils: { setTitleAndScroll: (pageTitle: string) => void };
 
-  constructor(props) {
+  constructor(props: any) {
     super(props);
     this.commonUtils = commonUtils;
   }

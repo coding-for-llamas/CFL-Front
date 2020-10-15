@@ -1,19 +1,38 @@
 {
   "verbose": true,
+  "timers": "fake",
   "bail": true,
+  "resetMocks": false,
+  "notify": true,
   "setupFiles": [
     "core-js/stable",
     "regenerator-runtime/runtime",
     "enzyme-react-16-adapter-setup",
-    "<rootDir>/test/jest-pretest.js"
+    "<rootDir>/test/jest-pretest.ts"
   ],
   "moduleNameMapper": {
-    ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "identity-obj-proxy"
+    "\\.(css|less|scss|sass)$": "identity-obj-proxy"
   },
-  "moduleFileExtensions": ["js", "json", "jsx", "ts", "tsx"],
-  "testPathIgnorePatterns": ["/node_modules/", "/puppeteer/"],
-  "collectCoverageFrom": ["src/**/*.{js,jsx,ts,tsx}"],
+  "moduleFileExtensions": [
+    "js",
+    "json",
+    "jsx",
+    "ts",
+    "tsx"
+  ],
+  "testPathIgnorePatterns": [
+    "/node_modules/",
+    "/puppeteer/"
+  ],
+  "collectCoverageFrom": [
+    "src/**/*.{js,jsx,ts,tsx}"
+  ],
   "collectCoverage": true,
-  "testEnvironment": "jest-environment-jsdom",
-  "testURL": "http://localhost/"
+  "testURL": "http://localhost/",
+  "transform": {
+    "^.+\\.tsx?$": "ts-jest"
+  },
+  "globals": {
+    "google": {}
+  }
 }
