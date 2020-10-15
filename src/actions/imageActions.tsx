@@ -1,4 +1,3 @@
-// @ts-nocheck
 import request from 'superagent';
 
 export const fetchImages = () => ({

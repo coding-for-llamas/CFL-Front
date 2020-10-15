@@ -1,10 +1,11 @@
-// @ts-nocheck
 import React, { Component } from 'react';
 import commonUtils from '../../components/lib/commonUtils';
 import DefaultAboutContent from './AboutContent';
 import DefaultFooter from '../../components/Footer/Footer';
 
 export class About extends Component {
+  commonUtils: { setTitleAndScroll: (pageTitle: string) => void };
+
   constructor(props) {
     super(props);
     this.commonUtils = commonUtils;
