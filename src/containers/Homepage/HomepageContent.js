@@ -1,5 +1,6 @@
 import React from 'react';
-import background from '../../../static/img/background.jpg';
+
+const background = 'https://www.dl.dropboxusercontent.com/s/9024lrtybjgx01f/background.jpg?dl=0';
 
 const HomeContent = () => (
   <div className="container">
