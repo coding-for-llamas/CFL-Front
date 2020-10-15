@@ -6,7 +6,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const { ProvidePlugin } = require('webpack');
 const webpack = require('webpack');
-// const TerserPlugin = require('terser-webpack-plugin');
 
 // config helpers:
 const ensureArray = (config) => config && (Array.isArray(config) ? config : [config]) || []; // eslint-disable-line no-mixed-operators
@@ -25,7 +24,6 @@ module.exports = ({
 }) => ({
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
-    // modules: [srcDir, 'node_modules'],
   },
 
   entry: {
@@ -39,7 +37,6 @@ module.exports = ({
     path: outDir,
     publicPath: baseUrl,
     filename: production ? '[name].[chunkhash].bundle.js' : '[name].[hash].bundle.js',
-    // sourceMapFilename: production ? '[name].[chunkhash].bundle.map' : '[name].[hash].bundle.map',
     chunkFilename: production ? '[name].[chunkhash].chunk.js' : '[name].[hash].chunk.js',
   },
 
@@ -48,7 +45,7 @@ module.exports = ({
   devServer: {
     contentBase: outDir,
     hot: true,
-    // // serve index.html for all 404 (required for push-state)
+    // serve index.html for all 404 (required for push-state)
     historyApiFallback: {
       rewrites: [
         { from: /^\/$/, to: '/' },
@@ -62,21 +59,6 @@ module.exports = ({
   devtool: production ? 'nosources-source-map' : 'source-map',
 
   optimization: {
-    // minimizer: production ? [
-    //   new TerserPlugin({
-    //     extractComments: true,
-    //     cache: true,
-    //     parallel: true,
-    //     sourceMap: true,
-    //     terserOptions: {
-    //     // https://github.com/webpack-contrib/terser-webpack-plugin#terseroptions
-    //       extractComments: 'all',
-    //       compress: {
-    //         drop_console: true,
-    //       },
-    //     },
-    //   }),
-    // ] : [],
     splitChunks: {
       cacheGroups: {
         styles: {
