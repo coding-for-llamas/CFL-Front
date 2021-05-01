@@ -4,7 +4,7 @@ const project1 = 'https://www.dl.dropboxusercontent.com/s/c9mxoixh5sqnict/projec
 
 const WorkContent = (): JSX.Element => (
   <div className="container">
-    <main className="work">
+    <main className="work-main">
       <h1 className="lg-heading">
         My
         {' '}

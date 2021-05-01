@@ -19,16 +19,12 @@ body {
 a {
     color: #fff;
     text-decoration: none;
-
-    &.stand-out {
-        color: rgb(236, 134, 206);
-
-        &:hover {
-            color: $secondary-color;
-            @include easeOut();
-        }
-    }
 }
+
+a:hover {
+    color: $secondary-color;
+    @include easeOut();
+  }
 
 .siteContent {
     main {
