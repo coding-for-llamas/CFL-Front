@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContactContent = (): JSX.Element => (
   <div className="container">
-    <main className="contact">
+    <main className="contact-main">
       <h1 className="lg-heading">
         Contact
         {' '}
@@ -16,13 +16,37 @@ const ContactContent = (): JSX.Element => (
       <div className="contact-info">
         <div className="contact contact-1">
           <p>
-            <a href="mailto:rhayven@codingforllamas.com">Email</a>
+            <a
+              href="mailto:rhayven@codingforllamas.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Email
+            </a>
             <br />
-            <a href="https://www.facebook.com/codingforllamas/">Facebook</a>
+            <a
+              href="https://www.facebook.com/codingforllamas/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Facebook
+            </a>
             <br />
-            <a href="https://twitter.com/codingforllamas">Twitter</a>
+            <a
+              href="https://twitter.com/codingforllamas"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Twitter
+            </a>
             <br />
-            <a href="https://github.com/unesdala">Github</a>
+            <a
+              href="https://github.com/unesdala"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Github
+            </a>
           </p>
         </div>
       </div>
