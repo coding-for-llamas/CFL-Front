@@ -17,28 +17,29 @@ const title = 'Coding For Llamas';
 const outDir = path.resolve(__dirname, 'dist');
 const srcDir = path.resolve(__dirname, 'src');
 const baseUrl = '/';
-const scssRules = [{ loader: 'sass-loader' }];
 
-module.exports = ({
-  production, analyze,
-} = {
-}) => ({
+module.exports = (env) => ({
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    fallback: { // needed for jsonwebtoken
+      crypto: require.resolve('crypto-browserify'),
+      stream: require.resolve('stream-browserify'),
+      util: require.resolve('util/'),
+    },
   },
 
   entry: {
     app: [`${srcDir}/main.tsx`],
-    vendor: ['bootstrap'],
+    vendor: ['bootstrap', 'jquery'],
   },
 
-  mode: production ? 'production' : 'development',
+  mode: env.production ? 'production' : 'development',
 
   output: {
     path: outDir,
     publicPath: baseUrl,
-    filename: production ? '[name].[chunkhash].bundle.js' : '[name].[hash].bundle.js',
-    chunkFilename: production ? '[name].[chunkhash].chunk.js' : '[name].[hash].chunk.js',
+    filename: env.production ? '[name].[chunkhash].bundle.js' : '[name].[fullhash].bundle.js',
+    chunkFilename: env.production ? '[name].[chunkhash].chunk.js' : '[name].[fullhash].chunk.js',
   },
 
   performance: { hints: false },
@@ -46,8 +47,7 @@ module.exports = ({
   devServer: {
     contentBase: outDir,
     hot: true,
-    // serve index.html for all 404 (required for push-state)
-    historyApiFallback: {
+    historyApiFallback: { // serve index.html for all 404 (required for push-state)
       rewrites: [
         { from: /^\/$/, to: '/' },
         { from: /^\//, to: '/' },
@@ -57,16 +57,13 @@ module.exports = ({
     port: parseInt(process.env.PORT, 10),
   },
 
-  devtool: production ? 'nosources-source-map' : 'source-map',
+  devtool: env.production ? 'nosources-source-map' : 'source-map',
 
   optimization: {
     splitChunks: {
       cacheGroups: {
         styles: {
-          name: 'styles',
-          test: /\.css$/i,
-          chunks: 'all',
-          enforce: true,
+          name: 'styles', test: /\.css$/i, chunks: 'all', enforce: true,
         },
       },
     },
@@ -88,7 +85,6 @@ module.exports = ({
       // only when the issuer is a .js/.ts file, so the loaders are not applied inside html templates
       {
         test: /\.scss$/,
-        issuer: [{ not: [{ test: /\.html$/i }] }],
         use: [
           process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader', // translates CSS into CommonJS
@@ -98,17 +94,9 @@ module.exports = ({
       // Still needed for some node modules that use CSS
       {
         test: /\.css$/i,
-        issuer: [{ not: [{ test: /\.html$/i }] }],
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
-      {
-        test: /\.scss$/i,
-        issuer: [{ test: /\.html$/i }],
-        // SCSS required in templates cannot be extracted safely
-        use: scssRules,
-      },
       { test: /\.html$/i, loader: 'html-loader' },
-      // embed small images and fonts as Data Urls and larger ones as files:
       { test: /\.(png|gif|jpg|cur)$/i, loader: 'url-loader', options: { limit: 8192 } },
       { test: /\.woff2(\?v=[0-9]\.[0-9]\.[0-9])?$/i, loader: 'url-loader', options: { limit: 10000, mimetype: 'application/font-woff2' } },
       { test: /\.woff(\?v=[0-9]\.[0-9]\.[0-9])?$/i, loader: 'url-loader', options: { limit: 10000, mimetype: 'application/font-woff' } },
@@ -120,24 +108,22 @@ module.exports = ({
   plugins: [
     new ProvidePlugin({
       Popper: ['popper.js', 'default'],
+      process: 'process/browser',
     }),
     new HtmlWebpackPlugin({
       template: `${srcDir}/index.ejs`,
-      minify: production ? { removeComments: true, collapseWhitespace: true } : undefined,
+      minify: env.production ? { removeComments: true, collapseWhitespace: true } : undefined,
       metadata: { title, baseUrl },
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
-      allChunks: true,
-      metadata: { title, baseUrl },
     }),
     new CopyPlugin({
       patterns: [
         { from: 'static/favicon.ico', to: 'favicon.ico' },
       ],
     }),
-    new webpack.EnvironmentPlugin(['NODE_ENV',
-      'AuthProductionBaseURL', 'PORT', 'BackendUrl', 'GoogleClientId', 'userRoles', 'HashString']),
-    ...when(analyze, new BundleAnalyzerPlugin()),
+    new webpack.EnvironmentPlugin(['NODE_ENV', 'BackendUrl', 'GoogleClientId', 'userRoles', 'HashString']),
+    ...when(env.analyze, new BundleAnalyzerPlugin()),
   ],
 });

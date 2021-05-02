@@ -17,7 +17,7 @@ export default class Navigation extends Component<Record<string, unknown>, Navig
     this.state = { width: 320 };
   }
 
-  onResize(width: number): void {
+  onResize(width: any): void {
     this.setState({ width });
   }
 
