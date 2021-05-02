@@ -14,7 +14,7 @@ describe('About', () => {
   it('Renders the About page', () => {
     const { wrapper } = setup();
     expect(wrapper.find(AboutContent).exists()).toBe(true);
-    expect(wrapper.find(AboutContent).dive().find('main.about').exists()).toBe(true);
+    expect(wrapper.find(AboutContent).dive().find('main.about-main').exists()).toBe(true);
     expect(wrapper.find(Footer).exists()).toBe(true);
     expect(wrapper.find(Footer).dive().find('footer#main-footer').exists()).toBe(true);
   });

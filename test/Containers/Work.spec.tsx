@@ -14,7 +14,7 @@ describe('Work', () => {
   it('Renders the Work page', () => {
     const { wrapper } = setup();
     expect(wrapper.find(WorkContent).exists()).toBe(true);
-    expect(wrapper.find(WorkContent).dive().find('main.work').exists()).toBe(true);
+    expect(wrapper.find(WorkContent).dive().find('main.work-main').exists()).toBe(true);
     expect(wrapper.find(Footer).exists()).toBe(true);
     expect(wrapper.find(Footer).dive().find('footer#main-footer').exists()).toBe(true);
   });
