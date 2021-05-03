@@ -109,6 +109,7 @@
     "redux-logger": "latest",
     "redux-persist": "latest",
     "redux-thunk": "latest",
+    "regenerator-runtime": "^0.13.7",
     "sass-loader": "latest",
     "slick-carousel": "latest",
     "snyk": "^1.518.0",
