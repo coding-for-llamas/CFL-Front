@@ -55,6 +55,8 @@
     "@types/domutils": "^1.7.2",
     "@types/ejs": "^3.0.1",
     "@types/enzyme": "^3.10.5",
+    "@types/express": "latest",
+    "@types/express-sslify": "latest",
     "@types/html-webpack-plugin": "latest",
     "@types/jest": "^25.1.4",
     "@types/mini-css-extract-plugin": "^0.9.1",
