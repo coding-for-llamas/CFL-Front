@@ -1,6 +1,7 @@
 {
   "verbose": true,
   "bail": true,
+  "timers": "fake",
   "testURL": "http://localhost/",
   "transform": {
     "^.+\\.tsx?$": "ts-jest"
