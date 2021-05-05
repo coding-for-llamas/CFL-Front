@@ -1,6 +1,6 @@
 {
-  "timers": "fake",
   "verbose": true,
+  "timers": "fake",
   "bail": true,
   "resetMocks": true,
   "notify": true,
@@ -29,5 +29,8 @@
   "testURL": "http://localhost/",
   "transform": {
     "^.+\\.tsx?$": "ts-jest"
+  },
+  "globals": {
+    "google": {}
   }
 }
