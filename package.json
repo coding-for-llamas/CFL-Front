@@ -87,6 +87,7 @@
     "dotenv": "latest",
     "expose-loader": "latest",
     "express": "latest",
+    "express-rate-limit": "^5.2.6",
     "express-sslify": "latest",
     "file-loader": "latest",
     "html-loader": "latest",
