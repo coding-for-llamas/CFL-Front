@@ -33,6 +33,11 @@ module.exports = (env) => ({
     vendor: ['bootstrap', 'jquery'],
   },
 
+  stats: {
+    children: true,
+    errorDetails: true,
+  },
+
   mode: env.production ? 'production' : 'development',
 
   output: {
