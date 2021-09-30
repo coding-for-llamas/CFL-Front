@@ -41,7 +41,7 @@ const WorkContent = (): JSX.Element => (
           <a href={project2PDF} target="_blank" rel="noreferrer">
             <img src={project2} alt="Screenshot of the cafe latte PDF preview" />
           </a>
-          <a href={project2PDF} className="btn-light" aria-label="Link to the PDF of the Cafe Latte case study">
+          <a href={project2PDF} target="_blank" rel="noreferrer" className="btn-light" aria-label="Link to the PDF of the Cafe Latte case study">
             <i className="fas fa-eye" />
             &nbsp;
             Cafe Latte Case Study
