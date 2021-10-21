@@ -1,0 +1,52 @@
+export interface MenuItem {
+  type: string,
+  projectType: string,
+  iconClass: string,
+  iconClass2: string,
+  btnType: string,
+  btnType2: string,
+  link: string,
+  link2: string,
+  name: string,
+  name2: string
+  ariaLabel: string,
+  ariaLabel2: string,
+  altCode: string
+  imgLink: string,
+  auth?: boolean,
+}
+const menuItems = [
+  {
+    projectType: 'site',
+    btnType: 'btn-light',
+    btnType2: 'btn-dark',
+    imgLink: 'https://www.dl.dropboxusercontent.com/s/c9mxoixh5sqnict/project1.png?dl=0',
+    type: 'link',
+    altCode: 'Screenshot of a daycare website',
+    iconClass: 'fas fa-eye',
+    iconClass2: 'fab fa-github',
+    link: '/daycare',
+    link2: 'https://github.com/coding-for-llamas/caring-child-daycare',
+    ariaLabel: 'Link to Caring Child Daycare',
+    ariaLabel2: 'Link to Caring Child Daycare Github Page',
+    name: 'Caring Child Daycare',
+    name2: 'Github',
+  },
+  {
+    projectType: 'caseStudy',
+    type: 'link',
+    link: '/cafe-latte',
+    imgLink: 'https://dl.dropboxusercontent.com/s/d652fnqcve9u3bb/Screenshot%202021-09-30%20at%2016-34-10%20cfl-front%20-%20Dropbox.png?dl=0',
+    altCode: 'Screenshot of the cafe latte PDF preview',
+    btnType: 'btn-light',
+    ariaLabel: 'Link to the PDF of the Cafe Latte case study',
+    iconClass: 'fas fa-eye',
+    name: 'Cafe Latte Case Study',
+    link2: 'https://dl.dropboxusercontent.com/s/o7vvnotuy1y6lh3/Cafe%20Latte%20Case%20Study.pdf?dl=0',
+    btnType2: 'btn-dark',
+    ariaLabel2: 'Link to the PDF of the Cafe Latte case study',
+    iconClass2: 'fas fa-eye',
+    name2: 'Cafe Latte Case Study PDF',
+  },
+];
+export default menuItems;
