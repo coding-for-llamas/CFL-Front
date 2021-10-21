@@ -19,18 +19,18 @@ export class WorkContent extends React.Component<RouteComponentProps> {
   makeMenuLink(menu: MenuItem, index: number): JSX.Element {
     return (
       <div key={index} className={menu.projectType}>
-        <Link to={menu.link} className="nav__link">
+        <Link to={menu.link[0]} className="nav__link">
           <img src={menu.imgLink} alt={menu.altCode} />
         </Link>
-        <Link to={menu.link} className={menu.btnType} aria-label={menu.ariaLabel}>
-          <i className={menu.iconClass} />
+        <Link to={menu.link[0]} className={menu.btnType[0]} aria-label={menu.ariaLabel[0]}>
+          <i className={menu.iconClass[0]} />
             &nbsp;
-          {menu.name}
+          {menu.name[0]}
         </Link>
-        <Link to={menu.link2} className={menu.btnType2} aria-label={menu.ariaLabel} target="_blank" rel="noreferrer">
-          <i className={menu.iconClass} />
+        <Link to={menu.link[1]} className={menu.btnType[1]} aria-label={menu.ariaLabel[1]} target="_blank" rel="noreferrer">
+          <i className={menu.iconClass[1]} />
             &nbsp;
-          {menu.name2}
+          {menu.name[1]}
         </Link>
       </div>
     );
