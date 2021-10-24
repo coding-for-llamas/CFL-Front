@@ -1,55 +1,77 @@
 import React from 'react';
+import { RouteComponentProps, withRouter } from 'react-router-dom';
+import menuItems, { MenuItem } from './menuItems';
+import menuUtils from './menuUtils';
 
-const project1 = 'https://www.dl.dropboxusercontent.com/s/c9mxoixh5sqnict/project1.png?dl=0';
-const project2 = 'https://dl.dropboxusercontent.com/s/d652fnqcve9u3bb/Screenshot%202021-09-30%20at%2016-34-10%20cfl-front%20-%20Dropbox.png?dl=0';
-const project2PDF = 'https://dl.dropboxusercontent.com/s/o7vvnotuy1y6lh3/Cafe%20Latte%20Case%20Study.pdf?dl=0';
+export class WorkContent extends React.Component<RouteComponentProps> {
+  menuUtils: typeof menuUtils;
 
-const WorkContent = (): JSX.Element => (
-  <div className="container">
-    <main className="work-main">
-      <h1 className="lg-heading">
-        My
-        {' '}
-        <span className="text-secondary">Work</span>
-      </h1>
+  menus: MenuItem[];
 
-      <h2 className="sm-heading">
-        Some of the projects I&apos;ve worked on.
-      </h2>
+  constructor(props: RouteComponentProps) {
+    super(props);
+    this.menus = menuItems;
+    this.menuUtils = menuUtils;
+    this.navLinks = this.navLinks.bind(this);
+  }
 
-      <div className="projects">
-        <div className="item">
-          <a href="/daycare">
-            <img src={project1} alt="Screenshot of a daycare website" />
-          </a>
-          <a href="/daycare" className="btn-light" aria-label="Link to Caring Child Daycare">
-            <i className="fas fa-eye" />
+  // eslint-disable-next-line class-methods-use-this
+  makeMenuLink(menu: MenuItem, index: number): JSX.Element {
+    return (
+      // May need to add back Link to after adding back the buttons
+      <div key={index} className={menu.projectType}>
+        <a href={menu.link[0]} className="nav__link">
+          <img src={menu.imgLink} alt={menu.altCode} />
+        </a>
+        {/* <Link to={menu.link[0]} className={menu.btnType[0]} aria-label={menu.ariaLabel[0]}>
+          <i className={menu.iconClass[0]} />
             &nbsp;
-            Caring Child Daycare
-          </a>
-          <a
-            href="https://github.com/coding-for-llamas/caring-child-daycare"
-            className="btn-dark"
-            aria-label="Link to Caring Child Daycare Github Page"
-          >
-            <i className="fab fa-github" />
+          {menu.name[0]}
+        </Link>
+        <a href={menu.link[1]} className={menu.btnType[1]} aria-label={menu.ariaLabel[1]} target="_blank" rel="noreferrer">
+          <i className={menu.iconClass[1]} />
             &nbsp;
-            Github
-          </a>
-        </div>
-        <div className="item">
-          <a href={project2PDF} target="_blank" rel="noreferrer">
-            <img src={project2} alt="Screenshot of the cafe latte PDF preview" />
-          </a>
-          <a href={project2PDF} target="_blank" rel="noreferrer" className="btn-light" aria-label="Link to the PDF of the Cafe Latte case study">
-            <i className="fas fa-eye" />
-            &nbsp;
-            Cafe Latte Case Study
-          </a>
-        </div>
+          {menu.name[1]}
+        </a> */}
       </div>
-    </main>
-  </div>
-);
+    );
+  }
 
-export default WorkContent;
+  navLinks(): JSX.Element {
+    return (
+      <div className="item">
+        {this.menus.map((menu, index) => (this.menuUtils.menuItem(menu, index, this)))}
+      </div>
+    );
+  }
+
+  projects(): JSX.Element {
+    return (
+      <div className="projects">
+        {this.navLinks()}
+      </div>
+    );
+  }
+
+  render(): JSX.Element {
+    return (
+      <div className="container">
+        <main className="work-main">
+          <h1 className="lg-heading">
+            My
+            {' '}
+            <span className="text-secondary">Work</span>
+          </h1>
+
+          <h2 className="sm-heading">
+            Some of the projects I&apos;ve worked on.
+          </h2>
+
+          {this.projects()}
+        </main>
+      </div>
+    );
+  }
+}
+
+export default withRouter(WorkContent);

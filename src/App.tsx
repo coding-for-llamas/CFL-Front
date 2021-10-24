@@ -8,6 +8,7 @@ import AppTemplate from './components/App-Main';
 import DefaultAbout from './containers/About/About';
 import DefaultWork from './containers/Work/Work';
 import DefaultContact from './containers/Contact/Contact';
+import DefaultCafeLatte from './containers/CafeLatte/CafeLatte';
 import FourOhFour from './containers/404';
 import getImages from './actions/imageActions';
 import mapStoreToProps, { Iimage } from './redux/mapStoreToProps';
@@ -39,6 +40,7 @@ export class App extends Component<AppProps> {
               <Route path="/about" component={DefaultAbout} />
               <Route path="/work" component={DefaultWork} />
               <Route path="/contact" component={DefaultContact} />
+              <Route path="/cafe-latte" component={DefaultCafeLatte} />
               <Route component={FourOhFour} />
             </Switch>
           </div>
