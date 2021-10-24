@@ -42,7 +42,16 @@ const CafeLatteContent = (): JSX.Element => (
             </div>
             <div className="project--problem">
               <i className="fas fa-exclamation-circle" />
-              <h2> </h2>
+              <h2>The Problem</h2>
+              <p>
+                Busy workers and commuters lack the time to
+                prepare a healthy meal that corresponds with
+                their schedule
+              </p>
+            </div>
+            <div className="project--goal">
+              <i className="#" />
+              <h2>The Goal</h2>
               <p>
                 Busy workers and commuters lack the time to
                 prepare a healthy meal that corresponds with
