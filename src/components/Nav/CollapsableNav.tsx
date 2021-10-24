@@ -19,7 +19,7 @@ const CollapsableNav = (): JSX.Element => {
             <NavItem><NavLink to="/about" tag={RRNavLink} onClick={toggleNavbar}>About Me</NavLink></NavItem>
             <NavItem><NavLink to="/work" tag={RRNavLink} onClick={toggleNavbar}>My Work</NavLink></NavItem>
             <NavItem><NavLink to="/contact" tag={RRNavLink} onClick={toggleNavbar}>Contact Me</NavLink></NavItem>
-            <NavItem>
+            {/* <NavItem>
               <NavLink
                 to="https://dl.dropboxusercontent.com/s/y47jfwxu6lytoas/Rhayven_Ayers_Resume.pdf?dl=0"
                 tag={RRNavLink}
@@ -27,7 +27,7 @@ const CollapsableNav = (): JSX.Element => {
               >
                 Resume
               </NavLink>
-            </NavItem>
+            </NavItem> */}
           </Nav>
         </Collapse>
       </Navbar>
