@@ -3,7 +3,15 @@
   "extends": ["airbnb-typescript", "airbnb/hooks", "plugin:security/recommended", "plugin:json/recommended",
     "plugin:node/recommended", "plugin:jest/recommended", "plugin:@typescript-eslint/recommended"
   ],
+  "settings": {
+    "node": {
+        "resolvePaths": ["src", "./src/**/*.ts", "./src/**/*.tsx"],
+        "tryExtensions": [".ts", ".tsx"]
+    }
+},
   "rules": {
+    "import/extensions":0,
+    "import/no-extraneous-dependencies":0,
     "jest/no-conditional-expect": 0,
     "react/jsx-filename-extension": [1, {
       "extensions": ["tsx"]
@@ -12,7 +20,12 @@
     "react/prop-types": 0,
     "node/no-unsupported-features/es-syntax": 0,
     "node/no-missing-import": ["error", {
+      "resolvePaths": ["src", "./src/**/*.ts", "./src/**/*.tsx"],
       "tryExtensions": [".js", ".json", ".tsx", ".ts"]
+    }],
+    "node/no-extraneous-import": ["error", {
+      "resolvePaths": ["./src"],
+      "tryExtensions": [".tsx", ".ts"]
     }],
     "no-multiple-empty-lines": [
       "error",
