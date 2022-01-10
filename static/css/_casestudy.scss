@@ -1,0 +1,22 @@
+.casestudy-info {
+  h1, h2, h3 {
+    margin: 1rem 0;
+  }
+
+  h1 {
+    width: max-content;
+    font-weight: bold;
+  }
+
+  h2 {
+    text-decoration: underline $third-color;
+
+    &.no-decoration {
+      text-decoration: none;
+    }
+  }
+
+  img {
+    height: 200px;
+  }
+}

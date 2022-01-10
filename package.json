@@ -1,5 +1,5 @@
 {
-  "name": "cfl",
+  "name": "cfl-front",
   "version": "1.1.0",
   "description": "codingforllamas.com",
   "main": "dist/index.html",
@@ -16,7 +16,7 @@
   ],
   "engines": {
     "node": ">=16.13.0 <17",
-    "npm": ">=8.1.4 <9"
+    "npm": ">=8.1.0 <9"
   },
   "files": [
     "webpack.config.js",
@@ -46,7 +46,6 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.9.2",
-    "@types/copy-webpack-plugin": "latest",
     "@types/core-js": "^2.5.4",
     "@types/domutils": "^1.7.2",
     "@types/ejs": "^3.0.1",
@@ -87,7 +86,6 @@
     "prop-types": "latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-google-login": "latest",
     "react-redux": "latest",
     "react-resize-detector": "latest",
     "react-router-dom": "^5.2.1",
@@ -120,7 +118,6 @@
   "devDependencies": {
     "@testing-library/jest-dom": "latest",
     "@testing-library/react": "latest",
-    "@types/expect-puppeteer": "latest",
     "@types/jest-environment-puppeteer": "latest",
     "@types/puppeteer": "latest",
     "@types/react-test-renderer": "latest",

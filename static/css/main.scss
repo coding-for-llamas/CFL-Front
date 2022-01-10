@@ -43,13 +43,13 @@ a:hover {
                 }
             }
         }
-    }
 
-    &.home {
-        overflow: hidden;
-
-        h1 {
-            margin-top: 20vh;
+        &.home-main {
+            overflow: hidden;
+    
+            h1 {
+                margin-top: 20vh;
+            }
         }
     }
 }
@@ -83,11 +83,6 @@ img.bg {
     }
 }
 
-.container {
-    margin-left: 3.5rem;
-    margin-top: 9rem;
-}
-
 .text-secondary {
     color: $secondary-color !important;
 }
@@ -106,5 +101,6 @@ main.home-main {
 
 @import 'about';
 @import 'work';
+@import 'casestudy';
 @import 'contact';
 @import 'mobile';

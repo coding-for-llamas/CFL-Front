@@ -10,18 +10,17 @@ const CafeLatteContent = (): JSX.Element => (
         <span className="text-secondary">Case Study</span>
       </h1>
 
-      <div className="cafeLatte-info">
+      <div className="cafeLatte-info casestudy-info">
         <div className="study-name">
           <h1>Cafe Latte App Design</h1>
-          <hr />
-          <h2>
+          <h2 className="no-decoration">
             Rhayven Ayers
           </h2>
+          <hr />
         </div>
         <div className="project--overview">
           <h1>Project Overview</h1>
           <div className="project--product">
-            <i className="fas fa-laptop-house" />
             <h2>The Product:</h2>
             <p>
               Cafe Latte is a local cafe offering a variety of coffee and food
@@ -32,15 +31,13 @@ const CafeLatteContent = (): JSX.Element => (
               Latte targets busy commuters who need a pick-me-up throughout
               their day.
             </p>
-            <i className="far fa-clock" />
             <h2>Project Duration:</h2>
             <p>
               July 2021 - October 2021
             </p>
-            <img src="#" alt="Two phone screens showing examples of the Cafe Latte app." />
           </div>
+          <hr />
           <div className="project--problem">
-            <i className="fas fa-exclamation-circle" />
             <h2>The Problem:</h2>
             <p>
               Busy workers and commuters lack the time to
@@ -49,7 +46,6 @@ const CafeLatteContent = (): JSX.Element => (
             </p>
           </div>
           <div className="project--goal">
-            <i className="#" />
             <h2>The Goal:</h2>
             <p>
               Busy workers and commuters lack the time to
@@ -58,20 +54,19 @@ const CafeLatteContent = (): JSX.Element => (
             </p>
           </div>
           <div className="project--my-role">
-            <i className="#" />
             <h2>My role:</h2>
             <p>
               UX Designer and Programmer designing an app for Cafe Latte from conception to finish.
             </p>
           </div>
           <div className="project--responsibilities">
-            <i className="#" />
             <h2>Responsibilities:</h2>
             <p>
               Conducting interviews, Paper and Digital wireframing, Low and High Fidelity protoyping, conducting usability research, accessibility testing, and iterating on designs.
             </p>
           </div>
         </div>
+        <hr />
         <div className="slide-card">
           <h1>Understanding The user</h1>
           <div className="slide-card--divider" />
@@ -87,7 +82,6 @@ const CafeLatteContent = (): JSX.Element => (
         <div className="user-research">
           <div className="user-research--sumary">
             <h1>User research: Summary</h1>
-            <i className="#" />
             <p>
               I conducted interviews and created user maps in order to understand the users I’m designing the app for. The primary user group identified was busy adults who wanted to be able to grab fast food that was healthier on their morning commute.
             </p>
@@ -97,17 +91,14 @@ const CafeLatteContent = (): JSX.Element => (
           </div>
           <div className="user-research--pain-points">
             <h1>User Research: Pain Points</h1>
-            <i className="#" />
             <h2>Time</h2>
             <p>
               Busy adults don’t have time to spend navigating apps to find a restaraunt to grab lunch from. They want a centralized experience for a place they already know and love.
             </p>
-            <i className="#" />
             <h2>Accessibility</h2>
             <p>
               Too many food ordering apps are not designed with low vision people in mind.
             </p>
-            <i className="#" />
             <h2>UI/UX</h2>
             <p>
               Many food ordering apps aren’t intuitive with their navigation. While some have great search options, they can be frustrating to use.
@@ -120,8 +111,9 @@ const CafeLatteContent = (): JSX.Element => (
               Jessica is a 23 year old college student
               who needs an accessible food ordering app because she was born blind.
             </p>
-            <img src="#" alt="A writeup of a persona card made for a persona named Jessica Turner." />
+            <img src="https://dl.dropboxusercontent.com/s/1ggink6u2cusnno/Persona.png?dl=0" alt="A writeup of a persona card made for a persona named Jessica Turner." />
           </div>
+          <hr />
           <div className="user-research--user-journey-map">
             <h1>User Journey Map</h1>
             <p>
@@ -130,9 +122,10 @@ const CafeLatteContent = (): JSX.Element => (
             {/* ToDo:
             Consider turning into an actual table to make more accessible.
             */}
-            <img src="#" alt="A squished user journey map made for Jessica Turner" />
+            {/* <img src="#" alt="A squished user journey map made for Jessica Turner" /> */}
           </div>
         </div>
+        <hr />
         <div className="slide-card">
           <h1>Starting The Design</h1>
           <div className="slide-card--divider" />
@@ -158,7 +151,7 @@ const CafeLatteContent = (): JSX.Element => (
               <span className="font--bold"> starred</span>
               .
             </p>
-            <img src="#" alt="The paper wireframe for Cafe Latte" />
+            {/* <img src="#" alt="The paper wireframe for Cafe Latte" /> */}
           </div>
           <div className="starting-the-design--digital-wireframes">
             <h1>Digital Wireframes</h1>
@@ -168,7 +161,7 @@ const CafeLatteContent = (): JSX.Element => (
             <p className="top-img-text">
               Large rotating image of foods for people who aren’t sure what they want.
             </p>
-            <img src="" alt="Screenshot of the homepage of Cafe Latte" />
+            <img src="https://dl.dropboxusercontent.com/s/j3j4jgssutmqt18/Homepage-1.png?dl=0" alt="Screenshot of the homepage of Cafe Latte" />
             <p className="bottom-img-text">
               Pictures of food to easily navigate to different menu items.
             </p>
@@ -181,7 +174,7 @@ const CafeLatteContent = (): JSX.Element => (
             <p className="top-img-text">
               Easy to access navigation that’s screen reader accessible.
             </p>
-            <img src="" alt="Screenshot of the mobile menu for Cafe Latte" />
+            {/* <img src="#" alt="Screenshot of the mobile menu for Cafe Latte" /> */}
             <p className="bottom-img-text">
               Cuts out fluff from the rest of the screen to reduce visual noise.
             </p>
@@ -193,7 +186,7 @@ const CafeLatteContent = (): JSX.Element => (
               View the Cafe Latte
               <a href="https://www.figma.com/proto/ybQ00gC7cgbE994ygyFcHA/Cafe-Latte?node-id=1%3A3&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A3"> Low-Fidelity App</a>
             </p>
-            <img src="#" alt="Screenshot of the low fidelity prototype showing the overall flow of the app" />
+            {/* <img src="#" alt="Screenshot of the low fidelity prototype showing the overall flow of the app" /> */}
           </div>
           <div className="starting-the-design--usability-study">
             <h1>Usability Study: Findings</h1>
@@ -202,38 +195,27 @@ const CafeLatteContent = (): JSX.Element => (
             </p>
             <div className="round-findings--1">
               <h2>Round 1 Findings</h2>
-              <i className="" />
-              {' '}
               <p>Users found navigating easy.</p>
-              <i className="" />
-              {' '}
               <p>Users knew how to get started.</p>
-              <i className="" />
-              {' '}
               <p>
                 Some users found adding food to the cart difficult.
               </p>
             </div>
             <div className="round-findings--2">
               <h2>Round 2 Findings</h2>
-              <i className="" />
-              {' '}
               <p>
                 Users wanted more ways to identify food options.
               </p>
-              <i className="" />
-              {' '}
               <p>
                 Users wanted clearer indications of adding food to the cart.
               </p>
-              <i className="" />
-              {' '}
               <p>
                 Users found navigation slightly frustrating due to spacing issues.
               </p>
             </div>
           </div>
         </div>
+        <hr />
         <div className="slide-card">
           <h1>Refining the design</h1>
           <div className="slide-card--divider" />
@@ -252,9 +234,9 @@ const CafeLatteContent = (): JSX.Element => (
               While early designs had the concept of adding images to use as a navigation tool (With alt text for screen readers), it was brought up that adding text underneath would be better for usability.
             </p>
             <h3 className="img-header">Before Usability Study</h3>
-            <img src="#" alt="A gray and white screenshot of the homepage" />
+            <img src="https://dl.dropboxusercontent.com/s/j3j4jgssutmqt18/Homepage-1.png?dl=0" alt="A gray and white screenshot of the homepage" />
             <h3 className="img-header">After Usability Study</h3>
-            <img src="#" alt="The finished version of the Cafe Latte Homepage" />
+            <img src="https://dl.dropboxusercontent.com/s/ftf5508ovzx6pgy/Homepage-2.png?dl=0" alt="The finished version of the Cafe Latte Homepage" />
           </div>
           <div className="refining-the-design--mockups-2">
             <h1>Mockups</h1>
@@ -262,15 +244,16 @@ const CafeLatteContent = (): JSX.Element => (
               In the original wireframe/mockup, there wasn’t a lot going on with the user profile. Through user feedback, we spruced up the look of it, and added much needed quality of life features.
             </p>
             <h3 className="img-header">Before Usability Study</h3>
-            <img src="#" alt="A gray and white screenshot of the user profile page." />
+            <img src="https://dl.dropboxusercontent.com/s/zk7pxf0wkizy1hm/Profile-1.png?dl=0" alt="A gray and white screenshot of the user profile page." />
             <h3 className="img-header">After Usability Study</h3>
-            <img src="#" alt="The finished version of the profile page" />
+            <img src="https://dl.dropboxusercontent.com/s/54k0v1juw2cpbw0/Profile-2.png?dl=0" alt="The finished version of the profile page" />
           </div>
           <div className="refining-the-design--mockups-3">
-            <img src="" alt="The finished version of the homepage" />
-            <img src="" alt="The finished version of an individual product page. This one includes a double cheese burger." />
-            <img src="" alt="The finished version of the order screen. It includes spots for a users billing information." />
-            <img src="" alt="The finished version of the confirmation order screen. It includes a mocked map, a time estimate, and a copy of the order." />
+            <h3>More Mockups</h3>
+            <img src="https://dl.dropboxusercontent.com/s/j975nqgjqhkw6y5/Mockup-1.png?dl=0" alt="The finished version of the homepage" />
+            <img src="https://dl.dropboxusercontent.com/s/dbihchgpamak7ce/Mockup-2.png?dl=0" alt="The finished version of an individual product page. This one includes a double cheese burger." />
+            <img src="https://dl.dropboxusercontent.com/s/ph6cfbtjfojm03q/Mockup-3.png?dl=0" alt="The finished version of the order screen. It includes spots for a users billing information." />
+            <img src="https://dl.dropboxusercontent.com/s/q392ged96w3obre/Mockup-4.png?dl=0" alt="The finished version of the confirmation order screen. It includes a mocked map, a time estimate, and a copy of the order." />
           </div>
           <div className="refining-the-design--high-fidelity">
             <h1>High-Fidelity Prototype</h1>
@@ -284,21 +267,19 @@ const CafeLatteContent = (): JSX.Element => (
           <div className="refining-the-design--">
             <h1>Accessibility Considerations</h1>
             <div className="accessibility-consideration--1">
-              <i className="#" />
               <p>
                 Added alt-text to allow visually impaired users to be able to identify images used in the app using a screen reader.
               </p>
             </div>
             <div className="accessibility-consideration--2">
-              <i className="#" />
               <p>Tested user flow for the app using Voice Over and TalkBack.</p>
             </div>
             <div className="accessibility-consideration--3">
-              <i className="#" />
               <p>Used Icons in addition to text to better visualize overall navigation for the app.</p>
             </div>
           </div>
         </div>
+        <hr />
         <div className="slide-card">
           <h1>Going Forward</h1>
           <div className="slide-card--divider" />
@@ -313,7 +294,6 @@ const CafeLatteContent = (): JSX.Element => (
           <div className="going-forward--takeaways">
             <h1>Takeaways</h1>
             <div className="going-forward--takeaways__impact">
-              <i className="#" />
               <h2>Impact:</h2>
               <p>
                 The app makes users feel like Cafe Latte really cares about their needs.
@@ -323,7 +303,6 @@ const CafeLatteContent = (): JSX.Element => (
               </p>
             </div>
             <div className="going-forward--takeaways__impact">
-              <i className="#" />
               <h2>What I learned:</h2>
               <p>
                 Listening to design feedback is important. Even when we try to eliminate bias in our designs, it can still come out, so not feeling beholden to a first iteration of a design is important. A combination of user and colleague input is important in the design process.
@@ -336,8 +315,8 @@ const CafeLatteContent = (): JSX.Element => (
               Thank you for your time reviewing my work on the Cafe Latte app! If you’d like to
               see more or get in touch, my contact information is provided below.
             </p>
-            <p>Email: codingforllamas@gmail.com</p>
-            <p>Website: https://codingforllamas.com</p>
+            <p>Email: <a href="mailto:codingforllamas@gmail.com">CodingForLlamas@Gmail.Com</a></p>
+            <p>Website: <a href="https://codingforllamas.com">CodingForLlamas.Com</a></p>
           </div>
         </div>
       </div>

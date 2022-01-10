@@ -1,9 +1,5 @@
 // Work/Projects
 .projects {
-  display: grid;
-  grid-gap: 0.7rem;
-  grid-template-columns: repeat(3, max-content);
-
   .item {
     display: grid;
     grid-gap: 0.7rem;

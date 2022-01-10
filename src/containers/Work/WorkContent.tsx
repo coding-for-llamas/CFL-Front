@@ -1,5 +1,5 @@
 import React from 'react';
-import { RouteComponentProps, withRouter } from 'react-router-dom';
+import { Link, RouteComponentProps, withRouter } from 'react-router-dom';
 import menuItems, { MenuItem } from './menuItems';
 import menuUtils from './menuUtils';
 
@@ -18,12 +18,11 @@ export class WorkContent extends React.Component<RouteComponentProps> {
   // eslint-disable-next-line class-methods-use-this
   makeMenuLink(menu: MenuItem, index: number): JSX.Element {
     return (
-      // May need to add back Link to after adding back the buttons
       <div key={index} className={menu.projectType}>
         <a href={menu.link[0]} className="nav__link">
           <img src={menu.imgLink} alt={menu.altCode} />
         </a>
-        {/* <Link to={menu.link[0]} className={menu.btnType[0]} aria-label={menu.ariaLabel[0]}>
+        <Link to={menu.link[0]} className={menu.btnType[0]} aria-label={menu.ariaLabel[0]}>
           <i className={menu.iconClass[0]} />
             &nbsp;
           {menu.name[0]}
@@ -32,7 +31,7 @@ export class WorkContent extends React.Component<RouteComponentProps> {
           <i className={menu.iconClass[1]} />
             &nbsp;
           {menu.name[1]}
-        </a> */}
+        </a>
       </div>
     );
   }

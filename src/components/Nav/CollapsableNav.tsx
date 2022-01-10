@@ -20,13 +20,14 @@ const CollapsableNav = (): JSX.Element => {
             <NavItem><NavLink to="/work" tag={RRNavLink} onClick={toggleNavbar}>My Work</NavLink></NavItem>
             <NavItem><NavLink to="/contact" tag={RRNavLink} onClick={toggleNavbar}>Contact Me</NavLink></NavItem>
             <NavItem>
-              <NavLink
-                to="https://dl.dropboxusercontent.com/s/y47jfwxu6lytoas/Rhayven_Ayers_Resume.pdf?dl=0"
-                tag={RRNavLink}
-                onClick={toggleNavbar}
+              <a
+                href="https://dl.dropboxusercontent.com/s/y47jfwxu6lytoas/Rhayven_Ayers_Resume.pdf?dl=0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="nav-link"
               >
                 Resume
-              </NavLink>
+              </a>
             </NavItem>
           </Nav>
         </Collapse>

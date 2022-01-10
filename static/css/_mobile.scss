@@ -10,9 +10,31 @@
 
 // Desktops & Laptops
 @include mediaLg {
+
+    .container {
+        margin-left: 15px;
+    }
+
+    h1.lg-heading, h2.lg-heading, h3.lg-heading {
+        font-size: 4rem;
+    }
+
+    .siteContent {
+        main {
+            padding: 2rem !important;
+        }
+    }
     // Work
-    .projects {
-        grid-template-columns: repeat(3, 1fr);
+    .projects .item {
+        grid-template-columns: repeat(2, max-content);
+    }
+
+    .about-info {
+        grid-gap: 20px;
+    }
+
+    .about-2, .about-3 {
+        width: 200px;
     }
 }
 
@@ -27,6 +49,10 @@
         .work {
             margin-top: -120px;
         }
+    }
+
+    .projects .item {
+        grid-template-columns: max-content;
     }
 
     main {
@@ -57,18 +83,17 @@
 
         grid-template-columns: 1fr;
     }
-
-    // Work
-    .projects,
-    .contact-info {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
 
 
 // Smartphones
 @include mediaSm {
     @include mobileMenu;
+
+    .fof {
+        margin-left: -110px;
+        margin-top: 110px;
+    }
 
     @media screen and (min-width: 320px) {
         // Homepage
@@ -80,24 +105,56 @@
                 font-size: 1.5rem;
             }
         }
+
+        .container {
+            padding-left: 110px !important;
+        }
+
+        .projects .item {
+            grid-template-columns: max-content;
+        }
+
+        .site, .caseStudy {
+            width: 80%;
+        }
     }
 
     @media screen and (min-width: 360px) {
+        .siteContent {
+            main {
+                margin-left: -90px !important;
+
+                .lg-heading {
+                    font-size: 4rem;
+                }
+
+                &.home-main {            
+                    h1 {
+                        margin-top: 10vh;
+                    }
+                }
+            }
+        }
+        
         .container {
             margin-top: 80px !important;
             .work {
                 margin-top: -130px !important;
             }
         }
-
-        main .lg-heading {
-            font-size: 4rem;
-        }
     }
 
     @media screen and (min-width: 400px) {
-        main .lg-heading {
-            margin: 0px 1.5px 0 10.5px;
+        main {
+            margin-left: -100px !important;
+
+            .lg-heading {
+                margin: 0px 1.5px 0 10.5px;
+            }
+        }
+
+        .site, .caseStudy {
+            width: 100%;
         }
     }
 
@@ -139,5 +196,13 @@
     .projects,
     .contact-info {
         grid-template-columns: 1fr;
+    }
+
+    .projects {
+        .item {
+            display: grid;
+            grid-gap: 0.7rem;
+            grid-template-columns: repeat(1, max-content);
+          }
     }
 }
