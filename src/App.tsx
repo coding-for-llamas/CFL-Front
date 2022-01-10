@@ -8,6 +8,8 @@ import DefaultAbout from './containers/About/About';
 import DefaultWork from './containers/Work/Work';
 import DefaultContact from './containers/Contact/Contact';
 import DefaultCafeLatte from './containers/CafeLatte/CafeLatte';
+import DefaultColourMePhoney from './containers/ColourMePhoney/ColourMePhoney';
+import DefaultAccessCropping from './containers/AccessCropping/AccessCropping';
 import FourOhFour from './containers/404';
 import getImages from './actions/imageActions';
 import mapStoreToProps, { Iimage } from './redux/mapStoreToProps';
@@ -40,6 +42,8 @@ export class App extends Component<AppProps> {
               <Route path="/work" component={DefaultWork} />
               <Route path="/contact" component={DefaultContact} />
               <Route path="/cafe-latte" component={DefaultCafeLatte} />
+              <Route path="/colour-me-phoney" component={DefaultColourMePhoney} />
+              <Route path="/access-cropping" component={DefaultAccessCropping} />
               <Route component={FourOhFour} />
             </Switch>
           </div>

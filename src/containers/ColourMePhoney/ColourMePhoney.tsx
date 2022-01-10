@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import commonUtils from '../../components/lib/commonUtils';
-import DefaultCafeLatteContent from './CafeLatteContent';
+import DefaultColourMePhoneyContent from './ColourMePhoneyContent';
 import DefaultFooter from '../../components/Footer/Footer';
 
-export class CafeLatte extends Component {
+export class ColourMePhoney extends Component {
   commonUtils: { setTitleAndScroll: (pageTitle: string) => void };
 
   constructor(props: any) {
@@ -11,13 +11,13 @@ export class CafeLatte extends Component {
     this.commonUtils = commonUtils;
   }
 
-  componentDidMount(): void { this.commonUtils.setTitleAndScroll('Cafe Latte Case Study'); }
+  componentDidMount(): void { this.commonUtils.setTitleAndScroll('Colour Me Phoney Case Study'); }
 
   render(): JSX.Element {
     return (
       <>
         <div className="page-content">
-          <DefaultCafeLatteContent />
+          <DefaultColourMePhoneyContent />
         </div>
         <DefaultFooter />
       </>
@@ -25,4 +25,4 @@ export class CafeLatte extends Component {
   }
 }
 
-export default CafeLatte;
+export default ColourMePhoney;
