@@ -21,11 +21,14 @@ const baseUrl = '/';
 const envVars = ['NODE_ENV', 'BackendUrl', 'GoogleClientId', 'userRoles', 'HashString'];
 if (nodeEnv === 'development')envVars.push('PORT');
 
+// No clue why webpack can't find it considering it's installed but here we are.
+const cryptoBrowserify = 'crypto-browserify';
+
 module.exports = (env) => ({
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
     fallback: { // needed for jsonwebtoken
-      crypto: require.resolve('crypto-browserify'),
+      crypto: require.resolve(cryptoBrowserify),
       stream: require.resolve('stream-browserify'),
       util: require.resolve('util/'),
     },

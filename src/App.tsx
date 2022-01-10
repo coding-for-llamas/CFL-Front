@@ -1,7 +1,6 @@
 import 'core-js/stable';
-import React, { Component, Dispatch } from 'react';
+import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { connect } from 'react-redux';
 import Navbar from './components/Nav/Navbar';
 import AppTemplate from './components/App-Main';
 import DefaultAbout from './containers/About/About';
@@ -11,25 +10,8 @@ import DefaultCafeLatte from './containers/CafeLatte/CafeLatte';
 import DefaultColourMePhoney from './containers/ColourMePhoney/ColourMePhoney';
 import DefaultAccessCropping from './containers/AccessCropping/AccessCropping';
 import FourOhFour from './containers/404';
-import getImages from './actions/imageActions';
-import mapStoreToProps, { Iimage } from './redux/mapStoreToProps';
 
-export interface AppProps {
-  dispatch: Dispatch<unknown>;
-  images: Iimage[];
-}
-
-export class App extends Component<AppProps> {
-  static defaultProps = {
-    dispatch: (): void => { },
-    images: [],
-  };
-
-  async componentDidMount(): Promise<void> {
-    const { dispatch, images } = this.props;
-    if (images.length === 0) dispatch(getImages());
-  }
-
+export class App extends Component {
   render(): JSX.Element {
     return (
       <div id="App" className="App Site">
@@ -54,4 +36,4 @@ export class App extends Component<AppProps> {
   }
 }
 
-export default connect(mapStoreToProps, null)(App);
+export default App;

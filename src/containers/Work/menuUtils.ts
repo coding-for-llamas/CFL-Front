@@ -1,4 +1,4 @@
-import { MenuItem } from './menuItems';
+import type { MenuItem } from './menuItems';
 import type { WorkContent } from './WorkContent';
 
 const menuItem = (menu: MenuItem,

@@ -6,8 +6,7 @@ import { App } from '../../src/App';
 
 env.config();
 describe('App component', () => {
-  const dp = (fun: any) => fun;
-  const wrapper = shallow<App>(<App dispatch={dp} />);
+  const wrapper = shallow<App>(<App />);
   it('renders the component', () => {
     expect(wrapper.find('div#App').exists()).toBe(true);
   });
@@ -15,8 +14,7 @@ describe('App component', () => {
     expect(wrapper).toMatchSnapshot();
   });
   it('does not fetch the images if they already exist', () => {
-    const images: any[] = [{}];
-    const wrapper2 = shallow(<App dispatch={dp} images={images} />);
+    const wrapper2 = shallow(<App />);
     expect(wrapper2.find('div#App').exists()).toBe(true);
   });
   it('renders when dispatch is not defined', () => {
