@@ -32,6 +32,7 @@
   "license": "MIT",
   "scripts": {
     "build:prod": "rm -rf dist && npx webpack --node-env=production --progress --env production",
+    "test:cc": "yarn test:lint && jest --config jest.config.json --no-cache --maxWorkers=2",
     "cc": "codeclimate analyze -f html > codeclimate.html",
     "start": "webpack serve --node-env=development --env --inline",
     "test:stylelint": "stylelint \"static/**/*.scss\"",
