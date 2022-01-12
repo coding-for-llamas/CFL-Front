@@ -1,7 +1,7 @@
 /* eslint-disable react/destructuring-assignment */
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
-import React, { Dispatch, PureComponent } from 'react';
+import React, { PureComponent } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import AppFourOhFour from './404';
@@ -9,20 +9,9 @@ import NavBar from '../components/Navbar';
 import DefaultHome from '../containers/Homepage';
 import Footer from '../components/Footer';
 import DefaultContact from '../containers/Contact';
-import mapStoreToProps, { Auth } from '../redux/mapStoreToProps';
+import mapStoreToProps from '../redux/mapStoreToProps';
 
-export interface AppProps {
-  dispatch: Dispatch<unknown>;
-  auth: Auth;
-}
-
-export class App extends PureComponent<AppProps> {
-  static defaultProps = {
-    dispatch: /* istanbul ignore next */(): void => { },
-    auth: {
-      isAuthenticated: false, token: '', error: '', email: '', user: { userType: '' },
-    },
-  };
+export class App extends PureComponent {
 
   render(): JSX.Element {
     return (

@@ -1,16 +1,5 @@
-export interface Auth {
-  isAuthenticated: boolean,
-  error: string,
-  email: string,
-  token: string,
-  user: {
-    userType: string;
-  };
-}
-
 interface MapProps {
   images:Iimage[];
-  auth:Auth;
 }
 
 export interface Iimage {
@@ -28,7 +17,6 @@ export interface Iimage {
 }
 export interface Store {
   images: { images: Iimage[] };
-  auth: Auth;
 }
 
 // eslint-disable-next-line arrow-body-style
@@ -36,7 +24,6 @@ const mapStoreToProps = (store: Store): MapProps => {
   // console.log(store);
   return ({
     images: store.images.images,
-    auth: store.auth,
   });
 };
 export default mapStoreToProps;

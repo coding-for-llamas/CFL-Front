@@ -24,7 +24,7 @@ export default class Navigation extends Component<Record<string, unknown>, Navig
     const { width } = this.state;
     return (
       <div className="navigation">
-        {width <= 768
+        {width <= 800
           ? (
             <h1>No</h1>
           ) : (
