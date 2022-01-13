@@ -4,7 +4,7 @@ import HomeContent from './HomepageContent';
 export const Homepage = (): JSX.Element => {
   return (
       <div className="Site-content">
-        <main>
+        <main className="home-main">
           <HomeContent />
         </main>
       </div>
