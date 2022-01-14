@@ -15,8 +15,20 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-}
 
-.Site-content {
-  flex: 1;
+  .Site-content {
+    flex: 1;
+  
+    main {
+        &[class$=-main] {
+          width: 80%;
+          padding: 10rem 0 4rem 5rem;
+
+          @include respond(phone) {
+            padding: 5rem 0 0 0;
+            margin: auto;
+          }
+        }
+      }
+  }
 }

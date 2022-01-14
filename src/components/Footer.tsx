@@ -1,5 +1,3 @@
-import React from 'react';
-
 function getFullYear() {
   const d = new Date();
   const n = d.getFullYear();

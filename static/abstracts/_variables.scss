@@ -1,14 +1,3 @@
 $primary-color: #312f2f;
 $secondary-color: #ce6674;
 $third-color: #ffc0c9;
-
-// Set Text Colour
-@function set-text-color($color) {
-    @if (lightness($color) > 40) {
-        @return #000;
-    }
-
-    @else {
-        @return #fff;
-    }
-}

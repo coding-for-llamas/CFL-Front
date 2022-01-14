@@ -6,7 +6,9 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import AppFourOhFour from './404';
 import NavBar from '../components/Navbar';
+import DefaultAbout from '../containers/About';
 import DefaultHome from '../containers/Homepage';
+import DefaultWork from '../containers/Work';
 import Footer from '../components/Footer';
 import DefaultContact from '../containers/Contact';
 import mapStoreToProps from '../redux/mapStoreToProps';
@@ -22,8 +24,8 @@ export class App extends PureComponent {
           <>
             <Switch>
               <Route exact path="/" component={DefaultHome} />
-              {/* <Route path="/about" component={DefaultAbout} />
-              <Route path="/work" component={DefaultWork} /> */}
+              <Route path="/about" component={DefaultAbout} />
+              <Route path="/work" component={DefaultWork} />
               <Route path="/contact" component={DefaultContact} />
               <Route component={AppFourOhFour} />
             </Switch>

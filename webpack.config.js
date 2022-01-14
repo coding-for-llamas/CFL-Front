@@ -18,12 +18,12 @@ const title = 'Coding For Llamas';
 const outDir = path.resolve(__dirname, 'dist');
 const srcDir = path.resolve(__dirname, 'src');
 const baseUrl = '/';
-const envVars = ['NODE_ENV',
-  'BackendUrl', 'GoogleClientId', 'userRoles', 'HashString'];
+const envVars = ['NODE_ENV', 'BackendUrl', 'GoogleClientId', 'userRoles', 'HashString'];
 if (nodeEnv === 'development')envVars.push('PORT');
 
 module.exports = (env) => ({
   resolve: {
+    alias:{ src: srcDir },
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
     fallback: { // needed for jsonwebtoken
       crypto: require.resolve('crypto-browserify'),
@@ -34,7 +34,6 @@ module.exports = (env) => ({
 
   entry: {
     app: [`${srcDir}/main.tsx`],
-    vendor: ['jquery', 'bootstrap'],
   },
 
   mode: env.production ? 'production' : 'development',
@@ -112,10 +111,6 @@ module.exports = (env) => ({
 
   plugins: [
     new ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-      'window.jQuery': 'jquery',
-      Popper: ['popper.js', 'default'],
       process: 'process/browser',
     }),
     new HtmlWebpackPlugin({

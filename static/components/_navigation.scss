@@ -24,14 +24,15 @@
         list-style: none;
     }
   
-    .nav-item {
+    .nav {
+      &-item {
         display: inline-block;
         text-align: left;
         list-style-type: none;
         padding: 1rem .3rem;
-    }
-  
-    .nav-link {
+      }
+
+      &-link {
         position: relative;
         padding: 0 .3rem 0 0 !important;
         font-size: 30px;
@@ -46,7 +47,9 @@
   
         &:hover {
             color: $secondary-color;
+            @include easeOut();
         }
+      }
     }
   }
 }

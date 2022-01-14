@@ -1,10 +1,12 @@
-import React from 'react';
+import ContactContent from './ContactContent';
 
 export const Contact = (): JSX.Element => {
   document.title = 'Contact | Coding For Llamas';  
   return (
       <div className="Site-content">
-        <h1>Contact</h1>
+        <main className="contact-main">
+          <ContactContent />
+        </main>
       </div>
   );
 };
