@@ -1,9 +1,11 @@
 {
-  "plugins": ["node", "security", "react", "jest", "@typescript-eslint", "json", "import"],
+  "plugins": ["node", "security", "react", "jest", "@typescript-eslint", "json"],
   "extends": ["airbnb-typescript", "airbnb/hooks", "plugin:security/recommended", "plugin:json/recommended",
     "plugin:node/recommended", "plugin:jest/recommended", "plugin:@typescript-eslint/recommended"
   ],
   "rules": {
+    "import/extensions":0,
+    "import/no-extraneous-dependencies":0,
     "jest/no-conditional-expect": 0,
     "react/jsx-filename-extension": [1, {
       "extensions": ["tsx"]
