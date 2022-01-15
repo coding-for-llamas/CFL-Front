@@ -27,6 +27,10 @@
 .Site-content {
   .icons {
     margin-top: 1rem;
+
+    @include respond(tab-port) {
+      margin-bottom: 2rem;
+    }
   
     a {
         padding: 0.4rem;

@@ -8,7 +8,7 @@ main.home-main {
 
     // Set up proportionate scaling
     width: 100%;
-    height: auto;
+    height: 100%;
 
     // Set up positioning
     position: fixed;
@@ -18,5 +18,13 @@ main.home-main {
     opacity: 0.1;
 
     z-index: -2;
+
+    @include respond(tab-port) {
+      min-width: 100%;
+    }
+
+    @include respond(flip-phone) {
+      min-width: 320px;
+    }
   }
 }

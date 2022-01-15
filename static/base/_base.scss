@@ -24,9 +24,18 @@ body {
           width: 80%;
           padding: 10rem 0 4rem 5rem;
 
-          @include respond(phone) {
+          @include respond(tab-land) {
+            padding: 7rem 0 0 0;
+            margin: auto;
+          }
+
+          @include respond(tab-port) {
             padding: 5rem 0 0 0;
             margin: auto;
+          }
+
+          @include respond(flip-phone) {
+            padding: 3.5rem 0 0 0;
           }
         }
       }

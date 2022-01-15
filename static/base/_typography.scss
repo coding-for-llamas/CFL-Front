@@ -4,9 +4,15 @@ h1, h2, h3 {
 
     &.lg-heading {
         font-size: 6rem;
-        @include respond(phone) {
+        
+        @include respond(tab-port) {
             font-size: 4rem;
         }
+        
+        @include respond(phone) {
+            font-size: 2.5rem;
+        }
+
     }
 
     &.sm-heading {
@@ -23,6 +29,10 @@ h1 {
 
 h2 {
     font-size: calc(1.325rem + .9vw);
+    
+    @include respond(tab-port) {
+        font-size: calc(1.1rem + 0.7vw);
+    }
 }
 
 h3 {
