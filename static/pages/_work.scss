@@ -1,0 +1,51 @@
+.work-projects {
+  display: grid;
+  grid-gap: .7rem;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  padding-bottom: 2rem;
+
+  @include respond(big-desktop) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include respond(tab-land) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond(tab-port) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  &--item {
+    .site {
+      img {
+        width: 300px;
+        height: 190px;
+        border: 1px #fff solid;
+
+        @include respond(phone) {
+          width: 260px;
+        }
+
+        &:hover {
+          opacity: .5;
+          border-color: $secondary-color;
+          @include easeOut();
+        }
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+
+    &.btn {
+      border: 1px #fff solid;
+    }
+
+    &:hover {
+      @include easeOut();
+    }
+  }
+}
