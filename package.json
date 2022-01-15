@@ -93,7 +93,7 @@
     "redux-thunk": "latest",
     "regenerator-runtime": "latest",
     "resize-observer-polyfill": "latest",
-    "sass": "latest",
+    "sass": "^1.48.0",
     "sass-loader": "^7.3.1",
     "snyk": "^1.685.0",
     "source-map-loader": "latest",

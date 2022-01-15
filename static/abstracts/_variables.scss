@@ -1,3 +1,16 @@
 $primary-color: #312f2f;
 $secondary-color: #ce6674;
 $third-color: #ffc0c9;
+
+// Replaces darken/lighten until I can figure out colour.adjust
+// background: rgba(lighten($primary-color, 2), 0.5);
+$primary-color-2: rgba(54,52,52,.5);
+// lighten($primary-color, 50);
+$primary-color-4: #b1aeae;
+
+//  background-color: darken($primary-color, 5);
+$primary-color-3: #242323;
+// background-color: darken($primary-color, 10);
+$primary-color-5: #171616;
+// background-color: darken($primary-color, 50);
+$primary-color-6: rgb(34, 34, 34);

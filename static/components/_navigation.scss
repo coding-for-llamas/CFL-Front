@@ -2,7 +2,7 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-end;
-  background-color: darken($primary-color, 5);
+  background-color: $primary-color-3;
 
 
   @include respond(tab-port) {
