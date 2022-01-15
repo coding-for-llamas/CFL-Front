@@ -1,3 +1,5 @@
+
+
 h1, h2, h3 {
     margin: 0;
     font-weight: 400;
@@ -19,7 +21,7 @@ h1, h2, h3 {
         margin-top: 1rem;
         margin-bottom: 2rem;
         padding: 0.3rem 1rem;
-        background: $primary-color-2;
+        background: adjust-color($primary-color,$lightness: 2%, $alpha: -0.5);
     }
 }
 

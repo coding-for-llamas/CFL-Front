@@ -16,14 +16,14 @@
 
 .btn-dark {
   @extend %btn;
-  background-color: $primary-color-6;
+  background-color: $darken-3;
 
   color: #fff !important;
 }
 
 .btn-light {
   @extend %btn;
-  background-color: $primary-color-4;
+  background-color: $lighten-2;
 
   color: #333 !important;
 }
