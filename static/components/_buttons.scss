@@ -14,13 +14,12 @@
 .btn-dark {
   @extend .btn;
   background-color: darken($primary-color, 50);
-  color: #fff;
 }
 
 .btn-light {
   @extend .btn;
   background-color: lighten($primary-color, 50);
-  color: #333;
+  color: #333 !important;
 }
 
 // Font Awesome
@@ -34,13 +33,6 @@
   
     a {
         padding: 0.4rem;
-
-        color: white;
-  
-        &:hover {
-            color: $secondary-color;
-            @include easeOut();
-        }
     }
   }
 }

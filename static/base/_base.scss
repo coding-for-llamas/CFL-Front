@@ -20,24 +20,34 @@ body {
     flex: 1;
   
     main {
-        &[class$=-main] {
-          width: 80%;
-          padding: 10rem 0 4rem 5rem;
+      &[class$=-main] {
+        width: 80%;
+        padding: 10rem 0 4rem 5rem;
 
-          @include respond(tab-land) {
-            padding: 7rem 0 0 0;
-            margin: auto;
-          }
+        @include respond(tab-land) {
+          padding: 7rem 0 0 0;
+          margin: auto;
+        }
 
-          @include respond(tab-port) {
-            padding: 5rem 0 0 0;
-            margin: auto;
-          }
+        @include respond(tab-port) {
+          padding: 5rem 0 0 0;
+          margin: auto;
+        }
 
-          @include respond(flip-phone) {
-            padding: 3.5rem 0 0 0;
-          }
+        @include respond(flip-phone) {
+          padding: 3.5rem 0 0 0;
         }
       }
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+
+      &:hover {
+        color: $secondary-color;
+        @include easeOut();
+      }
+    }
   }
 }
