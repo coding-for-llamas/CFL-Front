@@ -1,29 +1,18 @@
-import React, { Component } from 'react';
+import React, { RefObject } from 'react';
 import { NavLink } from 'react-router-dom';
-import ReactResizeDetector from 'react-resize-detector';
+import { withResizeDetector } from 'react-resize-detector';
 
-interface NavigationState {
+interface NavigationProps {
+  targetRef: RefObject<HTMLDivElement>;
   width: number;
 }
 
-export default class Navigation extends Component<Record<string, unknown>, NavigationState> {
-  parentRef: any;
-
-  constructor(props: Record<string, unknown>) {
-    super(props);
-    this.parentRef = React.createRef();
-    this.onResize = this.onResize.bind(this);
-    this.state = { width: 320 };
-  }
-
-  onResize(width: any): void {
-    this.setState({ width });
-  }
+export class Navigation extends React.Component<NavigationProps> {
 
   render(): JSX.Element {
-    const { width } = this.state;
+    const { width, targetRef } = this.props;
     return (
-      <div className="navigation">
+      <div ref={targetRef} className="navigation">
         {width <= 800
           ? (
             <h1>No</h1>
@@ -47,8 +36,9 @@ export default class Navigation extends Component<Record<string, unknown>, Navig
               </ul>
             </nav>
           )}
-        <ReactResizeDetector handleWidth handleHeight onResize={this.onResize} targetDomEl={this.parentRef.current} />
       </div>
     );
   }
 }
+
+export default withResizeDetector(Navigation);

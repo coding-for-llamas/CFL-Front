@@ -51,7 +51,6 @@
     "@types/ejs": "^3.0.1",
     "@types/enzyme": "^3.10.5",
     "@types/html-webpack-plugin": "latest",
-    "@types/jest": "latest",
     "@types/materialize-css": "^1.0.8",
     "@types/mini-css-extract-plugin": "latest",
     "@types/node": "latest",
@@ -113,6 +112,7 @@
   "devDependencies": {
     "@testing-library/jest-dom": "latest",
     "@testing-library/react": "latest",
+    "@types/jest": "^27.4.0",
     "@types/jest-environment-puppeteer": "latest",
     "@types/jsonwebtoken": "^8.5.4",
     "@types/react-test-renderer": "latest",

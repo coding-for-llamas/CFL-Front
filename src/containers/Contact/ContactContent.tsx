@@ -1,6 +1,6 @@
 const ContactContent = (): JSX.Element => (
   <>
-    <div className="Contact-header">
+    <div className="contact-header">
       <h1 className="lg-heading">
         Contact
         {' '}
