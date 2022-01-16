@@ -21,7 +21,7 @@ h1, h2, h3 {
         margin-top: 1rem;
         margin-bottom: 2rem;
         padding: 0.3rem 1rem;
-        background: adjust-color($primary-color,$lightness: 2%, $alpha: -0.5);
+        background: $lighten-1;
     }
 }
 

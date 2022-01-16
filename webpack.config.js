@@ -86,11 +86,21 @@ module.exports = (env) => ({
       // SCSS required in JS/TS files should use the style-loader that auto-injects it into the website
       // only when the issuer is a .js/.ts file, so the loaders are not applied inside html templates
       {
-        test: /\.scss$/,
+        test: /\.s[ac]ss$/i,
         use: [
           process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
-          'css-loader', // translates CSS into CommonJS
-          'sass-loader', // compiles Sass to CSS, using dart sass
+          {
+            loader: "css-loader", // translates CSS into CommonJS
+            options: {
+              sourceMap: true,
+            },
+          },
+          {
+            loader: "sass-loader", // compiles Sass to CSS, using dart sass
+            options: {
+              sourceMap: true,
+            },
+          },
         ],
       },
       // Still needed for some node modules that use CSS
