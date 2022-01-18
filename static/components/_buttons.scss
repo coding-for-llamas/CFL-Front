@@ -1,0 +1,44 @@
+// Button Styles
+.btn, %btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin: 1rem 0;
+
+  font-weight: bold;
+
+  &:hover {
+      background-color: $secondary-color;
+      // Replace with set-text-color when fixed
+      color: #000 !important;
+  }
+
+  &-dark {
+    @extend %btn;
+    background-color: $darken-3;
+  
+    color: #fff !important;
+  }
+
+  &-light {
+    @extend %btn;
+    background-color: $lighten-2;
+  
+    color: #333 !important;
+  }
+}
+
+// Font Awesome
+.Site-content {
+  .icons {
+    margin-top: 1rem;
+
+    @include respond('medium') {
+      margin-bottom: 2rem;
+    }
+  
+    a {
+        padding: 0.4rem;
+    }
+  }
+}

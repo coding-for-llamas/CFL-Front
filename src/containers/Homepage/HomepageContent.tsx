@@ -1,12 +1,9 @@
-import React from 'react';
-
 const background = 'https://www.dl.dropboxusercontent.com/s/9024lrtybjgx01f/background.jpg?dl=0';
 
 const HomeContent = (): JSX.Element => (
-  <div className="container">
-    <main className="home-main">
+  <>
       <img src={background} alt="Laptop" className="bg" />
-      <div className="homeHeader">
+      <div className="home-header">
         <h1 className="lg-heading">
           Rhayven
           {' '}
@@ -30,8 +27,7 @@ const HomeContent = (): JSX.Element => (
           </a>
         </div>
       </div>
-    </main>
-  </div>
+  </>
 );
 
 export default HomeContent;
