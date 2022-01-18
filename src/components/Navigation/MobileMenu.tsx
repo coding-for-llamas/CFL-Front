@@ -21,13 +21,15 @@ const MobileNav = (): JSX.Element => {
             <li className="nav-item"><NavLink to="/work" tag={RRNavLink} onClick={toggleNavbar}>My Work</NavLink></li>
             <li className="nav-item"><NavLink to="/contact" tag={RRNavLink} onClick={toggleNavbar}>Contact Me</NavLink></li>
             <li className="nav-item">
-              <NavLink
-                to="https://dl.dropboxusercontent.com/s/y47jfwxu6lytoas/Rhayven_Ayers_Resume.pdf?dl=0"
-                tag={RRNavLink}
-                onClick={toggleNavbar}
-              >
-                Resume
-              </NavLink>
+            <a
+              href="https://dl.dropboxusercontent.com/s/y47jfwxu6lytoas/Rhayven_Ayers_Resume.pdf?dl=0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nav-link"
+              onClick={toggleNavbar}
+            >
+              Resume
+            </a>
             </li>
           </ul>
         </Collapse>
