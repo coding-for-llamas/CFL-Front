@@ -1,7 +1,7 @@
 // BREAKPOINTS
 
 /*
-0-350px  :  Flip-phone
+0-350px  :  Flip phone
 350-600px:  Phone
 600-900px:  Tablet portrait
 900-1200 :  Tablet landscape
@@ -9,11 +9,11 @@
 1800px+  :  Big desktop
 
 $breakpoint argument choices:
-- flip-phone
-- phone
-- tab-port
-- tab-land
-- big-desktop
+- extra-small
+- small
+- medium
+- large
+- huge
 
 ORDER: Base + typography > General layout + grid > page layout > components
 
@@ -21,23 +21,23 @@ ORDER: Base + typography > General layout + grid > page layout > components
 */
 
 @mixin respond($breakpoint) {
-  @if $breakpoint == flip-phone {
+  @if $breakpoint == 'extra-small' {
     @media (max-width: 21.875em) { @content; } // 350px
   }
 
-  @if $breakpoint == phone {
+  @if $breakpoint == 'small' {
     @media (max-width: 37.5em) { @content; } // 600px
   }
 
-  @if $breakpoint == tab-port {
+  @if $breakpoint == 'medium' {
     @media (max-width: 56.25em) { @content; } // 900px
   }
 
-  @if $breakpoint == tab-land {
+  @if $breakpoint == 'large' {
     @media (max-width: 75em) { @content; } // 1200px
   }
 
-  @if $breakpoint == big-desktop {
+  @if $breakpoint == 'huge' {
     @media (min-width: 112.5em) { @content; } // 1800px
   }
 }

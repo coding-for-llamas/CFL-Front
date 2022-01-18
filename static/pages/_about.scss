@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
-    @include respond(phone) {
+    @include respond('small') {
       grid-template-columns: repeat(1, 1fr);
     }
   }
@@ -15,11 +15,11 @@
   }
 
   &-text {
-    @include respond(tab-port) {
+    @include respond('medium') {
       padding-left: 5px;
     }
 
-    @include respond(phone) {
+    @include respond('small') {
       text-align: center;
       padding-top: 1rem;
       padding-left: 0;
@@ -38,11 +38,11 @@
     padding-top: 2rem;
     grid-gap: 3%;
 
-    @include respond(tab-port) {
+    @include respond('medium') {
       grid-template-columns: repeat(3, auto);
     }
 
-    @include respond(phone) {
+    @include respond('small') {
       grid-template-columns: repeat(1, 250px);
       justify-content: center;
     }

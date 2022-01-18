@@ -1,32 +1,33 @@
 .navigation {
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-end;
+  justify-content: flex-start;
   background-color: $darken-1;
 
-
-  @include respond(tab-port) {
-    .navigation {
-      justify-content: space-around;
-    }
+  @include respond('small') {
+    flex-direction: column;
   }
 
-  @include respond(phone) {
-    .navigation {
-      flex-direction: column;
+  .navbar {
+    @include respond('medium') {
+      padding-top: 2.5rem;
+    }
+
+    & .navbar-toggler {
+      position: absolute;
+      z-index: 3;
+      right: 5px;
+      top: 3.5px;
     }
   }
-
-  .menu {
-    &-nav {
-        margin: 0;
-        padding-left: 1rem;
-        list-style: none;
-    }
+  
+  .menu-nav {
+    margin: 0;
+    padding-left: 1rem;
+    list-style: none;
   
     .nav {
       &-item {
-        display: inline-block;
         text-align: left;
         list-style-type: none;
         padding: 1rem .3rem;

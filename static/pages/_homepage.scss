@@ -19,11 +19,11 @@ main.home-main {
 
     z-index: -2;
 
-    @include respond(tab-port) {
+    @include respond('medium') {
       min-width: 100%;
     }
 
-    @include respond(flip-phone) {
+    @include respond('extra-small') {
       min-width: 320px;
     }
   }

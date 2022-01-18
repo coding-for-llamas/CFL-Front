@@ -7,11 +7,11 @@ h1, h2, h3 {
     &.lg-heading {
         font-size: 6rem;
         
-        @include respond(tab-port) {
+        @include respond('medium') {
             font-size: 4rem;
         }
         
-        @include respond(phone) {
+        @include respond('small') {
             font-size: 2.5rem;
         }
 
@@ -25,24 +25,14 @@ h1, h2, h3 {
     }
 }
 
-h1 {
-    font-size: calc(1.375rem + 1.5vw);
-}
-
-h2 {
-    font-size: calc(1.325rem + .9vw);
-    
-    @include respond(tab-port) {
+h2 { 
+    @include respond('medium') {
         font-size: calc(1.1rem + 0.7vw);
     }
 }
 
-h3 {
-    font-size: calc(1.3rem + .6vw);
-}
-
 .text-secondary {
-  color: $secondary-color;
+  color: $secondary-color !important;
 }
 
 .underline {

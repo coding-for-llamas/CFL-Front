@@ -5,13 +5,13 @@ import React, { PureComponent } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import AppFourOhFour from './404';
-import NavBar from '../components/Navbar';
-import DefaultAbout from '../containers/About';
-import DefaultHome from '../containers/Homepage';
-import DefaultWork from '../containers/Work';
-import Footer from '../components/Footer';
-import DefaultContact from '../containers/Contact';
-import mapStoreToProps from '../redux/mapStoreToProps';
+import NavBar from 'src/components/Navigation/Navbar';
+import DefaultAbout from 'src/containers/About';
+import DefaultHome from 'src/containers/Homepage';
+import DefaultWork from 'src/containers/Work';
+import Footer from 'src/components/Footer';
+import DefaultContact from 'src/containers/Contact';
+import mapStoreToProps from 'src/redux/mapStoreToProps';
 
 export class App extends PureComponent {
 

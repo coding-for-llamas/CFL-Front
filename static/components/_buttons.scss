@@ -3,7 +3,7 @@
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
-  margin-bottom: 0.3rem;
+  margin: 1rem 0;
 
   font-weight: bold;
 
@@ -12,20 +12,20 @@
       // Replace with set-text-color when fixed
       color: #000 !important;
   }
-}
 
-.btn-dark {
-  @extend %btn;
-  background-color: $darken-3;
+  &-dark {
+    @extend %btn;
+    background-color: $darken-3;
+  
+    color: #fff !important;
+  }
 
-  color: #fff !important;
-}
-
-.btn-light {
-  @extend %btn;
-  background-color: $lighten-2;
-
-  color: #333 !important;
+  &-light {
+    @extend %btn;
+    background-color: $lighten-2;
+  
+    color: #333 !important;
+  }
 }
 
 // Font Awesome
@@ -33,7 +33,7 @@
   .icons {
     margin-top: 1rem;
 
-    @include respond(tab-port) {
+    @include respond('medium') {
       margin-bottom: 2rem;
     }
   
