@@ -22,7 +22,7 @@ window.HTMLMediaElement.prototype.pause = () => { /* do nothing */ };
 Object.defineProperty(window, 'location', { value: { assign: () => { }, reload: () => { } }, writable: true });
 window.location = {
   ...window.location,
-  href: 'https://web-jam.com',
+  href: 'https://codingforllamas.com',
   reload: jest.fn(),
   assign: jest.fn(),
 };
