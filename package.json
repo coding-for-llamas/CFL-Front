@@ -42,7 +42,8 @@
     "test": "npm run test:lint && npm run test:jest",
     "test:local": "npm run test:lint-fix && npm run test:jest && npm run cc",
     "test:jest": "jest --config jest.config.json --no-cache --runInBand",
-    "cleaninstall": "rm -rf npm.lock && rm -rf package-lock.json && rm -rf node_modules && npm cache clean --force && npm install"
+    "cleaninstall": "rm -rf npm.lock && rm -rf package-lock.json && rm -rf node_modules && npm cache clean --force && npm install",
+    "postinstall": "npm run build:prod"
   },
   "dependencies": {
     "@types/core-js": "^2.5.4",
