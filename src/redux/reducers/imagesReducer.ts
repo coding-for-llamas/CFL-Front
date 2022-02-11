@@ -1,3 +1,5 @@
+import type { Iimage } from '../mapStoreToProps';
+
 const initialState = {
   images: [],
   isFetching: false,
@@ -5,7 +7,8 @@ const initialState = {
   error: '',
 };
 
-const imagesReducer = (state = initialState, action: any): any => {
+// eslint-disable-next-line @typescript-eslint/default-param-last
+const imagesReducer = (state = initialState, action: { type: string, data?: Iimage[], error?: { message: string } }): Record<string, unknown> => {
   switch (action.type) {
     case 'FETCH_IMAGES':
       return {
@@ -26,7 +29,7 @@ const imagesReducer = (state = initialState, action: any): any => {
         ...state,
         isError: true,
         isFetching: false,
-        error: action.error.message,
+        error: action.error ? action.error.message : 'unknown error',
       };
     default:
       return state;

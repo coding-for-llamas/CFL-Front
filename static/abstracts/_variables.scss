@@ -1,0 +1,10 @@
+@use "sass:color";
+
+$primary-color: #312f2f;
+$secondary-color: #ce6674;
+
+$lighten-1: color.adjust($primary-color, $lightness: 2%, $alpha: -0.5);
+$lighten-2: color.adjust($primary-color, $lightness: 50%);
+$darken-1: color.adjust($primary-color, $lightness: -5%);
+$darken-2: color.adjust($primary-color, $lightness: -10%);
+$darken-3: color.adjust($primary-color, $lightness: -50%);

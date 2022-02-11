@@ -1,0 +1,85 @@
+.navigation {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  background-color: $darken-1;
+
+
+  @include respond('medium') {
+    flex-direction: column;
+      .navbar {
+        padding: 1.4rem 3rem;
+
+        .navbar-toggler {
+          position: absolute;
+          z-index: 3;
+          right: 10px;
+          top: 2px;
+        }
+
+        .nav {
+          flex-direction: column;
+
+          &-item {
+            text-align: left;
+            list-style-type: none;
+
+              .nav-link {
+                display: inline-block;
+                position: relative;
+                font-size: 30px;
+                text-transform: uppercase;
+                font-weight: 300;
+                color: set-text-color($primary-color) !important;
+                text-decoration: none;
+                @include easeOut;
+              
+                &.active {
+                    color: $secondary-color !important;
+                }
+              
+                &:hover {
+                    color: $secondary-color !important;
+                }
+              }
+            }
+        }
+      }
+    }
+
+  .menu {
+    &-nav {
+        margin: 0;
+        padding-left: 1rem;
+        list-style: none;
+    }
+  
+    .nav {
+      &-item {
+        display: inline-block;
+        text-align: left;
+        list-style-type: none;
+        padding: 1rem .3rem;
+      }
+
+      &-link {
+        position: relative;
+        padding: 0 .3rem 0 0 !important;
+        font-size: 30px;
+        text-transform: uppercase;
+        font-weight: 300;
+        color: set-text-color($primary-color);
+        text-decoration: none;
+  
+        &.active {
+            color: $secondary-color;
+        }
+  
+        &:hover {
+            color: $secondary-color;
+            @include easeOut();
+        }
+      }
+    }
+  }
+}

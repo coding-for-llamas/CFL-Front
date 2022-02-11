@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
 require('dotenv').config();
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -13,13 +12,17 @@ const ensureArray = (config) => config && (Array.isArray(config) ? config : [con
 const when = (condition, config, negativeConfig) => (condition ? ensureArray(config) : ensureArray(negativeConfig));
 
 // primary config:
+const nodeEnv = process.env.NODE_ENV || 'development';
 const title = 'Coding For Llamas';
 const outDir = path.resolve(__dirname, 'dist');
 const srcDir = path.resolve(__dirname, 'src');
 const baseUrl = '/';
+const envVars = ['NODE_ENV', 'BackendUrl', 'GoogleClientId', 'userRoles', 'HashString'];
+if (nodeEnv === 'development')envVars.push('PORT');
 
 module.exports = (env) => ({
   resolve: {
+    alias:{ src: srcDir },
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
     fallback: { // needed for jsonwebtoken
       crypto: require.resolve('crypto-browserify'),
@@ -30,12 +33,6 @@ module.exports = (env) => ({
 
   entry: {
     app: [`${srcDir}/main.tsx`],
-    vendor: ['bootstrap', 'jquery'],
-  },
-
-  stats: {
-    children: true,
-    errorDetails: true,
   },
 
   mode: env.production ? 'production' : 'development',
@@ -50,7 +47,7 @@ module.exports = (env) => ({
   performance: { hints: false },
 
   devServer: {
-    contentBase: outDir,
+    static: outDir,
     hot: true,
     historyApiFallback: { // serve index.html for all 404 (required for push-state)
       rewrites: [
@@ -89,11 +86,21 @@ module.exports = (env) => ({
       // SCSS required in JS/TS files should use the style-loader that auto-injects it into the website
       // only when the issuer is a .js/.ts file, so the loaders are not applied inside html templates
       {
-        test: /\.scss$/,
+        test: /\.s[ac]ss$/i,
         use: [
           process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
-          'css-loader', // translates CSS into CommonJS
-          'sass-loader', // compiles Sass to CSS, using Node Sass by default
+          {
+            loader: "css-loader", // translates CSS into CommonJS
+            options: {
+              sourceMap: true,
+            },
+          },
+          {
+            loader: "sass-loader", // compiles Sass to CSS, using dart sass
+            options: {
+              sourceMap: true,
+            },
+          },
         ],
       },
       // Still needed for some node modules that use CSS
@@ -101,7 +108,8 @@ module.exports = (env) => ({
         test: /\.css$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
-      { test: /\.html$/i, loader: 'html-loader' },
+      { test: /\.html$/i, loader: 'html-loader' }, // eslint-disable-next-line no-useless-escape
+      // embed small images and fonts as Data Urls and larger ones as files:
       { test: /\.(png|gif|jpg|cur)$/i, loader: 'url-loader', options: { limit: 8192 } },
       { test: /\.woff2(\?v=[0-9]\.[0-9]\.[0-9])?$/i, loader: 'url-loader', options: { limit: 10000, mimetype: 'application/font-woff2' } },
       { test: /\.woff(\?v=[0-9]\.[0-9]\.[0-9])?$/i, loader: 'url-loader', options: { limit: 10000, mimetype: 'application/font-woff' } },
@@ -112,7 +120,6 @@ module.exports = (env) => ({
 
   plugins: [
     new ProvidePlugin({
-      Popper: ['popper.js', 'default'],
       process: 'process/browser',
     }),
     new HtmlWebpackPlugin({
@@ -128,7 +135,7 @@ module.exports = (env) => ({
         { from: 'static/favicon.ico', to: 'favicon.ico' },
       ],
     }),
-    new webpack.EnvironmentPlugin(['NODE_ENV', 'BackendUrl', 'GoogleClientId', 'userRoles', 'HashString']),
+    new webpack.EnvironmentPlugin(envVars),
     ...when(env.analyze, new BundleAnalyzerPlugin()),
   ],
 });

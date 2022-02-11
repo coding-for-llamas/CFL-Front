@@ -1,0 +1,13 @@
+.contact {
+  &-info {
+    width: 200px;
+    background: #3e3b3b;
+    padding: .5rem;
+    border-bottom: $secondary-color 5px solid;
+
+    p {
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+  }
+}

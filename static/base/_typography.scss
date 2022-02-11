@@ -1,0 +1,40 @@
+
+
+h1, h2, h3 {
+    margin: 0;
+    font-weight: 400;
+
+    &.lg-heading {
+        font-size: 6rem;
+        
+        @include respond('medium') {
+            font-size: 4rem;
+        }
+        
+        @include respond('small') {
+            font-size: 2.5rem;
+        }
+
+    }
+
+    &.sm-heading {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        padding: 0.3rem 1rem;
+        background: $lighten-1;
+    }
+}
+
+h2 { 
+    @include respond('medium') {
+        font-size: calc(1.1rem + 0.7vw);
+    }
+}
+
+.text-secondary {
+  color: $secondary-color !important;
+}
+
+.underline {
+    text-decoration: underline;
+}

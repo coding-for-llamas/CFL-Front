@@ -1,0 +1,53 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $primary-color;
+  color: set-text-color($primary-color);
+}
+
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+
+  .Site-content {
+    flex: 1;
+  
+    main {
+      &[class$=-main] {
+        width: 80%;
+        padding: 10rem 0 4rem 5rem;
+
+        @include respond('large') {
+          padding: 7rem 0 0 0;
+          margin: auto;
+        }
+
+        @include respond('medium') {
+          padding: 5rem 0 0 0;
+          margin: auto;
+        }
+
+        @include respond('extra-small') {
+          padding: 3.5rem 0 0 0;
+        }
+      }
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+
+      &:hover {
+        color: $secondary-color;
+        @include easeOut();
+      }
+    }
+  }
+}
