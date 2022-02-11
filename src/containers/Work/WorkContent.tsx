@@ -15,12 +15,10 @@ const WorkContent = (): JSX.Element => (
         <div className="site">
           <a className="nav_link" href="/daycare"><img src="https://www.dl.dropboxusercontent.com/s/c9mxoixh5sqnict/project1.png?dl=0" 
           alt="Screenshot of a daycare website." /></a>
-          <a href="#" className="btn btn-light" aria-label="" target="_blank" rel="noreferrer">
-          <i className="" />
-            &nbsp;
+          <a href="/daycare" className="btn btn-light" target="_blank" rel="noreferrer">
             Daycare
           </a>
-          <a href="#" className="btn btn-dark" aria-label="" target="_blank" rel="noreferrer">
+          <a href="https://github.com/coding-for-llamas/caring-child-daycare" className="btn btn-dark" target="_blank" rel="noreferrer">
           <i className="" />
             &nbsp;
             Github
