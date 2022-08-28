@@ -1,7 +1,7 @@
 .about {
   &-intro {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, auto);
 
     @include respond('small') {
       grid-template-columns: repeat(1, 1fr);
@@ -9,7 +9,7 @@
   }
 
   &-picture {
-    margin: auto;
+    margin-inline: auto 3rem;
     border-radius: 50%;
     border: $secondary-color 3px solid;
   }
@@ -33,7 +33,7 @@
 
   &-proficiency {
     display: grid;
-    grid-template-columns: repeat(3, 250px);
+    grid-template-columns: repeat(3, 30rem);
     justify-content: space-between;
     padding-top: 2rem;
     grid-gap: 3%;
@@ -43,7 +43,7 @@
     }
 
     @include respond('small') {
-      grid-template-columns: repeat(1, 250px);
+      grid-template-columns: repeat(1, 25rem);
       justify-content: center;
     }
 

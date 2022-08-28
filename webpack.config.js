@@ -56,7 +56,7 @@ module.exports = (env) => ({
         { from: /./, to: '/' },
       ],
     },
-    port: parseInt(process.env.PORT, 10),
+    port: parseInt(process.env.PORT, 10) || 8989,
   },
 
   devtool: env.production ? 'nosources-source-map' : 'source-map',
