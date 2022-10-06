@@ -97,7 +97,7 @@
     "resize-observer-polyfill": "latest",
     "sass": "latest",
     "sass-loader": "latest",
-    "snyk": "^1.685.0",
+    "snyk": "^1.996.0",
     "source-map-loader": "latest",
     "stream-browserify": "^3.0.0",
     "style-loader": "latest",
